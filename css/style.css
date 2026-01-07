@@ -79,3 +79,16 @@ footer {
     font-size: 0.9rem;
     color: #777;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url("images/city.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
