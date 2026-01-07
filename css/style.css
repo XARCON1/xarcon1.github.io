@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+                url('../images/city.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    letter-spacing: 4px;
+}
+
+.slogan {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #00aaff;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #00aaff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 60px 10%;
+}
+
+.about, .contact {
+    background-color: #151515;
+}
+
+.services {
+    background-color: #0f0f0f;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #00aaff;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #1f1f1f;
+    padding: 25px;
+    border-left: 4px solid #00aaff;
+}
+
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #777;
+}
