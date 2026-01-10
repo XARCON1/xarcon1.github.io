@@ -93,11 +93,8 @@ footer {
 
 }
 .about {
-  
     padding: 80px 20px;
-    background-color: #121212; /* negro/gris elegante */
-    color: #eaeaea;
-
+    background-color: #121212;
 }
 
 .about .container {
@@ -107,7 +104,9 @@ footer {
 }
 
 .about h2 {
-    color: #00aaff; /* azul técnico */
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #00aaff;
 }
 
 .about p {
