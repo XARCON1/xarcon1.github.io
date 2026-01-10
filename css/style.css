@@ -52,7 +52,7 @@ section {
 }
 
 .services {
-    background-color: #0f0f0f;
+    background-color: #121212;
     .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -72,7 +72,7 @@ h2 {
 }
     
 .service-card {
-    background: #ffffff;
+    background: #121212;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
