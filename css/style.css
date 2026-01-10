@@ -143,5 +143,15 @@ h1, h2 {
         opacity: 1;
         letter-spacing: normal;
     }
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
 }
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
