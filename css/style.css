@@ -53,6 +53,10 @@ section {
 
 .services {
     background-color: #0f0f0f;
+    .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
 }
 
 h2 {
@@ -80,8 +84,63 @@ h2 {
 .service-card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+
 }
 
+.process {
+    padding: 90px 20px;
+    background-color: #0f1419;
+    color: #ffffff;
+}
+
+.process .container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.process h2 {
+    font-size: 36px;
+    margin-bottom: 60px;
+    color: #00aaff;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.process-step {
+    background: #151b22;
+    padding: 35px 25px;
+    border-radius: 14px;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.step-number {
+    font-size: 42px;
+    font-weight: bold;
+    color: rgba(0,170,255,0.25);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.process-step h3 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.process-step p {
+    color: #cfd6dd;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 footer {
@@ -143,10 +202,7 @@ h1, h2 {
         opacity: 1;
         letter-spacing: normal;
     }
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.9s ease;
+
 }
 
 .reveal.show {
