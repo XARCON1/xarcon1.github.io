@@ -151,10 +151,6 @@ section {
     text-align: center;
 }
 
-.process-step p,{
-    color: #cccccc;
-}
-
 .process .section-title {
     text-align: center;
    font-size: 36px;
@@ -190,6 +186,9 @@ section {
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: none;
+}
+.process-step p,{
+    color: #cccccc;
 }
 
 .process-step:hover::after {
