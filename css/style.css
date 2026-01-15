@@ -72,7 +72,7 @@ section {
 }
 
 .about p {
-    color: #cccccc;
+    color: #000000; /* negro puro */
     font-size: 18px;
 }
 /* Fondo parallax para Servicios y Proceso */
