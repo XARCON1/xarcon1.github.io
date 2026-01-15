@@ -94,14 +94,14 @@ section {
 }
 /* SERVICIOS */
 .service-card {
-    position: relative; /* Necesario para el pseudo-elemento */
+    position: relative;
     background: #1c1c1c;
     padding: 30px;
     border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* transición para transform y sombra */
     cursor: pointer;
-    overflow: hidden; /* Para que el efecto de luz no se salga */
+    overflow: hidden;
 }
 
 .service-card::after {
@@ -132,10 +132,9 @@ section {
 }
 
 .service-card:hover {
-    transform: scale(1.06) translateY(-12px);
+    transform: scale(1.06) translateY(-12px); /* escalar + subir */
     box-shadow: 0 22px 55px rgba(0,0,0,0.65);
 }
-
 /* PROCESO */
 .process {
     background: #111;
@@ -153,6 +152,7 @@ section {
     gap: 30px;
 }
 
+/* PROCESO */
 .process-step {
     position: relative;
     background: #1c1c1c;
@@ -183,26 +183,9 @@ section {
 }
 
 .process-step:hover {
-    transform: scale(1.05) translateY(-10px);
+    transform: scale(1.05) translateY(-10px); /* escalar + subir */
     box-shadow: 0 20px 50px rgba(0,0,0,0.55);
 }
-
-.step-number {
-    font-size: 28px;
-    font-weight: bold;
-    color: #f4b400;
-}
-
-.process-step h3 {
-    color: #f4b400;
-    margin: 15px 0 10px;
-}
-
-.process-step p {
-    color: #ccc;
-    font-size: 15px;
-}
-
 /* CONTACTO */
 .contact {
     background: #151515;
