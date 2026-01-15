@@ -146,16 +146,6 @@ section {
     color: #f4b400 !important; /* fuerza dorado */
 }
 /* PROCESO */
-/* Fondo parallax para Servicios y Proceso */
-.services,
-.process {
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-                url('../images/service.jpg') center/cover no-repeat;
-    background-attachment: fixed;  /* efecto parallax */
-    background-size: cover;
-    text-align: center;
-}
-
 .process .section-title {
     text-align: center;
     margin-bottom: 50px;
