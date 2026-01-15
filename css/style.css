@@ -52,7 +52,7 @@ section {
 }
 
 .services {
-    background-color: #121212;
+    background-color: #5F6A6A;
     .reveal {
     opacity: 0;
     transform: translateY(40px);
