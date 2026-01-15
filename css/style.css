@@ -185,3 +185,8 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+.process .section-title,
+.contact h2 {
+    color: #00aaff;
+}
+
