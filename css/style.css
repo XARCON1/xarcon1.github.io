@@ -77,9 +77,13 @@ section {
 }
 
 /* SERVICIOS */
-.services {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('../images/service.jpg') center/cover no-repeat;
+/* Fondo parallax para Servicios y Proceso */
+.services,{
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url('../images/bg-construction.jpg') center/cover no-repeat;
+    background-attachment: fixed;  /* efecto parallax */
+    background-size: cover;
+    text-align: center;
 
 }
 
@@ -144,9 +148,12 @@ section {
 }
 
 /* PROCESO */
+/* Fondo parallax para Servicios y Proceso */
 .process {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('../images/process-bg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url('../images/bg-construction.jpg') center/cover no-repeat;
+    background-attachment: fixed;  /* efecto parallax */
+    background-size: cover;
     text-align: center;
 }
 
@@ -203,7 +210,8 @@ section {
 
 /* CONTACTO */
 .contact {
-    background: #151515;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('../images/process-bg.jpg') center/cover no-repeat;
     text-align: center;
 }
 
