@@ -150,6 +150,7 @@ section {
     background: transparent;  /* elimina fondo propio */
     text-align: center;
 }
+
 .process-step p,{
     color: #cccccc;
 }
@@ -210,7 +211,6 @@ section {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                 url('../images/process-bg.jpg') center/cover no-repeat;
     text-align: center;
-    font-size: 36px;
 }
 
 .contact p {
