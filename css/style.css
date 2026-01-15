@@ -81,6 +81,10 @@ section {
     text-align: center;
 }
 
+.service-card p {
+       color: #cccccc;
+}
+
 .services h2 {
     color: #00aaff;
     margin-bottom: 40px;
@@ -202,8 +206,11 @@ section {
 .contact {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                 url('../images/process-bg.jpg') center/cover no-repeat;
-    color: #00aaff
     text-align: center;
+}
+
+.contact h2 {
+    color: #00aaff;
 }
 
 /* FOOTER */
