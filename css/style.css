@@ -9,6 +9,19 @@ body {
     background: url('../images/service.jpg') center/cover no-repeat fixed;
     line-height: 1.6;   
 }
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif; /* o cualquier otra fuente que quieras */
+    font-weight: 700; /* negrita para títulos */
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* normal para párrafos */
+}
 
 /* HERO */
 .hero {
