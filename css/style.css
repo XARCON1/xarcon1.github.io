@@ -156,7 +156,7 @@ section {
 
 .process .section-title {
     text-align: center;
-    margin-bottom: 50px;
+   font-size: 36px;
     color: #00aaff;
 }
 
@@ -210,6 +210,7 @@ section {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                 url('../images/process-bg.jpg') center/cover no-repeat;
     text-align: center;
+    font-size: 36px;
 }
 
 .contact p {
