@@ -75,16 +75,14 @@ section {
     color: #cccccc;
     font-size: 18px;
 }
-
-/* SERVICIOS */
 /* Fondo parallax para Servicios y Proceso */
-.services,{
+.services,
+.process {
     background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
                 url('../images/bg-construction.jpg') center/cover no-repeat;
     background-attachment: fixed;  /* efecto parallax */
     background-size: cover;
     text-align: center;
-
 }
 
 .services h2 {
@@ -109,6 +107,7 @@ section {
     cursor: pointer;
     overflow: hidden;
 }
+
 .service-card i {
     color: #f4b400;      /* dorado como los títulos */
     margin-bottom: 15px;
@@ -146,9 +145,9 @@ section {
 .service-card h3 {
     color: #f4b400 !important; /* fuerza dorado */
 }
-
 /* PROCESO */
 /* Fondo parallax para Servicios y Proceso */
+.services,
 .process {
     background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
                 url('../images/bg-construction.jpg') center/cover no-repeat;
