@@ -22,6 +22,7 @@ body {
 }
 
 .hero h1 {
+    color: #ffffff;
     font-size: 4rem;
     letter-spacing: 4px;
 }
@@ -201,6 +202,7 @@ section {
 .contact {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                 url('../images/process-bg.jpg') center/cover no-repeat;
+    color: #00aaff
     text-align: center;
 }
 
