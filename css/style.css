@@ -103,6 +103,16 @@ section {
     cursor: pointer;
     overflow: hidden;
 }
+.service-card i {
+    color: #f4b400;      /* dorado como los títulos */
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-card:hover i {
+    transform: scale(1.2);
+    color: #00aaff;      /* cambia de color al pasar mouse */
+}
 
 .service-card::after {
     content: '';
