@@ -6,9 +6,8 @@
 }
 
 body {
-    background-color: #0f0f0f;
-    color: #ffffff;
-    line-height: 1.6;
+    background: url('../images/service.jpg') center/cover no-repeat fixed;
+    line-height: 1.6;   
 }
 
 /* HERO */
@@ -76,12 +75,8 @@ section {
     font-size: 18px;
 }
 /* Fondo parallax para Servicios y Proceso */
-.services,
-.process {
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-                url('../images/service.jpg') center/cover no-repeat;
-    background-attachment: fixed;  /* efecto parallax */
-    background-size: cover;
+.services {
+    background: transparent;  /* elimina fondo propio */
     text-align: center;
 }
 
