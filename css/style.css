@@ -61,7 +61,7 @@ section {
 
 /* ABOUT */
 .about {
-    background-color: #D8CFC4;
+    background-color: #CFC3B6;
     text-align: center;
 }
 
@@ -79,7 +79,7 @@ section {
 .services,
 .process {
     background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-                url('../images/bg-construction.jpg') center/cover no-repeat;
+                url('../images/service.jpg') center/cover no-repeat;
     background-attachment: fixed;  /* efecto parallax */
     background-size: cover;
     text-align: center;
@@ -150,7 +150,7 @@ section {
 .services,
 .process {
     background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-                url('../images/bg-construction.jpg') center/cover no-repeat;
+                url('../images/service.jpg') center/cover no-repeat;
     background-attachment: fixed;  /* efecto parallax */
     background-size: cover;
     text-align: center;
