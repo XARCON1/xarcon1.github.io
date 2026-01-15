@@ -99,7 +99,7 @@ section {
     padding: 30px;
     border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    transition: transform 0.4s ease, box-shadow 0.4s ease; /* transición para transform y sombra */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: pointer;
     overflow: hidden;
 }
@@ -117,22 +117,16 @@ section {
     pointer-events: none;
 }
 
-.service-card:hover {
-    transform: scale(1.06) translateY(-12px)
-    box-shadow: 0 22px 55px rgba(0,0,0,0.65)
-
-.service-card h3 {
-    color: #f4b400;
-    margin-bottom: 10px;
-}
-
-.service-card p {
-    color: #ccc;
+.service-card:hover::after {
+    opacity: 1;
+    transform: rotate(30deg);
 }
 
 .service-card:hover {
-    transform: scale(1.06) translateY(-12px); /* escalar + subir */
+    transform: scale(1.06) translateY(-12px);
     box-shadow: 0 22px 55px rgba(0,0,0,0.65);
+}
+
 }
 /* PROCESO */
 .process {
@@ -182,9 +176,10 @@ section {
 }
 
 .process-step:hover {
-    transform: scale(1.05) translateY(-10px)
-    box-shadow: 0 20px 50px rgba(0,0,0,0.55) 
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.55);
 }
+
 /* CONTACTO */
 .contact {
     background: #151515;
@@ -202,13 +197,13 @@ footer {
 /* ANIMACIONES SCROLL */
 .reveal {
     opacity: 0;
-    transform: translateY(40px) scale(1);
-    transition: all 0.8s ease;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .reveal.show {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
 }
 
 .process .section-title,
