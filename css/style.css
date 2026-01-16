@@ -8,6 +8,7 @@
 body {
     background: url('../images/service.jpg') center/cover no-repeat fixed;
     line-height: 1.6;   
+    
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -21,6 +22,11 @@ h1, h2, h3 {
 p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400; /* normal para párrafos */
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
 }
 
 /* HERO */
@@ -266,14 +272,16 @@ footer {
 }
 
 .sidebar {
-    width: 240px;
-    height: 100vh;
+    width: 250px;
+    background: #0b0b0b;
+    color: #fff;
     position: fixed;
-    left: 0;
     top: 0;
-    background: #111;
+    left: 0;
+    height: 100vh;
     padding: 30px 20px;
 }
+
 
 .sidebar h3 {
     color: #5fd3ff;
@@ -293,7 +301,9 @@ footer {
 }
 
 .content {
-    margin-left: 240px;
+    margin-left: 250px; /* mismo ancho que el sidebar */
+    width: calc(100% - 250px);
 }
+
 
 
