@@ -353,6 +353,42 @@ p {
 .service-card p {
     color: #dddddd;
 }
+    
+.calculator {
+    background: #1c1c1c;
+    padding: 40px 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    text-align: center;
+    color: #cccccc;
+}
+
+.calculator input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border-radius: 6px;
+    border: none;
+}
+
+.calculator button {
+    padding: 12px 25px;
+    margin-top: 15px;
+    background: #f4b400;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background: #e0a500;
+}
+
+.calculator .container h2 {
+    margin-bottom: 30px;
+    color: #CFC3B6; /* color de título similar a tus otros */
+}
 
 
 
