@@ -108,7 +108,7 @@ section {
 }
 
 .services h2 {
-    color: #00aaff;
+    color: #CFC3B6; /* gris-beige */
     font-size: 36px;
     text-align: center;
 }
@@ -176,7 +176,8 @@ section {
 .process .section-title {
     text-align: center;
    font-size: 36px;
-    color: #00aaff;
+   color: #CFC3B6; /* gris-beige */
+
 }
 
 .process-grid {
