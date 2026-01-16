@@ -137,8 +137,7 @@ section {
 }
 
 /* ===== SERVICIOS ===== */
-.services 
-{
+.services {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                 url('../images/service.jpg') center/cover no-repeat fixed;
     text-align: center;
@@ -215,9 +214,13 @@ section {
 
 /* ===================== PROCESO ===================== */
 .process {
-    background: transparent;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('../images/service.jpg') center/cover no-repeat fixed;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* parallax */
 }
-
 .process .section-title {
     font-size: 36px;
     color: #f4b400;
