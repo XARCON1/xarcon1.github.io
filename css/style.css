@@ -316,9 +316,9 @@ section {
 
 /* ===================== CONTACTO ===================== */
 .contact {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('../images/service.jpg') center/cover no-repeat;
+    background: rgba(0, 0, 0, 0.4); /* negro con 40% de opacidad */
     text-align: center;
+    padding: 80px 10%;
 }
 
 .contact h2 {
