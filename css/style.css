@@ -354,40 +354,37 @@ p {
     color: #dddddd;
 }
     
-.calculator {
+#calculadoras .service-card {
     background: #1c1c1c;
-    padding: 40px 20px;
+    padding: 25px;
     border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    text-align: center;
-    color: #cccccc;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.calculator input {
-    padding: 10px;
-    margin: 10px 0;
-    width: 80%;
-    border-radius: 6px;
+#calculadoras input {
+    padding: 8px;
+    border-radius: 8px;
     border: none;
+    width: 100%;
 }
 
-.calculator button {
-    padding: 12px 25px;
-    margin-top: 15px;
+#calculadoras button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
     background: #f4b400;
     color: #000;
-    border: none;
-    border-radius: 30px;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.calculator button:hover {
-    background: #e0a500;
-}
+#calculadoras button:hover {
+    background: #e1a600;
 
-.calculator .container h2 {
-    margin-bottom: 30px;
-    color: #CFC3B6; /* color de título similar a tus otros */
 }
 
 
