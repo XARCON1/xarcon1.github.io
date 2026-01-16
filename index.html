@@ -112,25 +112,49 @@
                     </div>
                 </div>
             </div>
-            <!-- CALCULADORA -->
-<section id="calculadora" class="calculator reveal">
-  <div class="container">
-    <h2>Calculadora de Materiales</h2>
-    <form id="calcForm">
-      <label>Largo (m):</label>
-<input type="number" id="largo" min="0" step="0.01" placeholder="Ej: 2.5">
-        
-      <label>ancho (m):</label>
-<input type="number" id="ancho" min="0" step="0.01" placeholder="Ej: 2.5">
+<!-- CALCULADORAS -->
+<section id="calculadoras" class="services reveal">
+    <div class="container">
+        <h2>Calculadoras de Materiales</h2>
 
-     <label>alto (m):</label>
-<input type="number" id="alto" min="0" step="0.01" placeholder="Ej: 2.5">
-        
-      <button type="submit">Calcular</button>
-    </form>
+        <div class="services-grid">
+            <!-- Concreto -->
+            <div class="service-card">
+                <h3>Concreto</h3>
+                <p>Calcula cemento, arena y grava para tu proyecto.</p>
+                <label>Largo (m):</label>
+                <input type="number" id="largoConcreto" min="0" step="0.01" placeholder="Ej: 2.5">
 
-    <div id="resultado"></div>
-  </div>
+                <label>Ancho (m):</label>
+                <input type="number" id="anchoConcreto" min="0" step="0.01" placeholder="Ej: 1.5">
+
+                <label>Alto (m):</label>
+                <input type="number" id="altoConcreto" min="0" step="0.01" placeholder="Ej: 0.12">
+
+                <button onclick="calcularConcreto()">Calcular</button>
+
+                <div id="resultadoConcreto"></div>
+            </div>
+
+            <!-- Mortero -->
+            <div class="service-card">
+                <h3>Mortero</h3>
+                <p>Calcula cemento y arena para tu proyecto.</p>
+                <label>Largo (m):</label>
+                <input type="number" id="largoMortero" min="0" step="0.01" placeholder="Ej: 2.5">
+
+                <label>Ancho (m):</label>
+                <input type="number" id="anchoMortero" min="0" step="0.01" placeholder="Ej: 1.5">
+
+                <label>Alto (m):</label>
+                <input type="number" id="altoMortero" min="0" step="0.01" placeholder="Ej: 0.12">
+
+                <button onclick="calcularMortero()">Calcular</button>
+
+                <div id="resultadoMortero"></div>
+            </div>
+        </div>
+    </div>
 </section>
 
         </section>
@@ -170,25 +194,37 @@ document.querySelectorAll('.reveal').forEach(el => {
     observer.observe(el);
 });
 </script>
-    
-<script>
-document.getElementById('calcForm').addEventListener('submit', function(e){
-    e.preventDefault();
+#calculadoras .service-card {
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
- const largo = parseFloat(document.getElementById('largo').value);
-const ancho = parseFloat(document.getElementById('ancho').value);
-const alto = parseFloat(document.getElementById('alto').value);
+#calculadoras input {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+}
 
-const volumen = largo * ancho * alto; // m³ con decimales
-const cemento = volumen * 7; // bolsas, por ejemplo
-const arena = volumen * 0.5; // m³
+#calculadoras button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background: #f4b400;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-    document.getElementById('resultado').innerHTML = `
-      <p>Volumen: ${volumen.toFixed(2)} m³</p>
-      <p>Cemento: ${cemento.toFixed(0)} bolsas</p>
-      <p>Arena: ${arena.toFixed(2)} m³</p>
-    `;
-});
+#calculadoras button:hover {
+    background: #e1a600;
+}
 </script>
 
 </body>
