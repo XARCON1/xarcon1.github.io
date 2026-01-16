@@ -428,6 +428,19 @@ p {
     font-weight: bold;
 }
 
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;   /* ya no fijo */
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .content {
+        margin-left: 0;       /* elimina el margen lateral */
+        width: 100%;
+    }
+}
 
 
 
