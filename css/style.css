@@ -7,7 +7,8 @@
 }
 
 body {
-    background: url('../images/service.jpg') center/cover no-repeat fixed;
+    body {
+    background: url('../images/service.jpg') center/contain no-repeat fixed;
     line-height: 1.6;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #ffffff; /* color general del texto */
