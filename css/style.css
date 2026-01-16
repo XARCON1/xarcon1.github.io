@@ -7,8 +7,7 @@
 }
 
 body {
-    body {
-    background: #0f0f0f;
+    background:url('../images/service.jpg') center/cover no-repeat fixed;
     line-height: 1.6;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #ffffff; /* color general del texto */
@@ -139,7 +138,7 @@ section {
 
 /* ===== SERVICIOS ===== */
 .services {
-    background: url('../images/service.jpg') center/cover no-repeat fixed;
+    background: transparent;
 }
 
 .services h2 {
