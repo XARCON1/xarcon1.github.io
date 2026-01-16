@@ -387,6 +387,25 @@ p {
 
 }
 
+.input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-row label {
+    width: 80px;   /* ancho fijo para labels */
+    color: #cccccc;
+}
+
+.input-row input {
+    flex: 1;      /* ocupa el resto del espacio */
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
 
 
 
