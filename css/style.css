@@ -1,38 +1,73 @@
+/* ===================== RESET Y TIPOGRAFÍA ===================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
-body {
-    background: url('../images/service.jpg') center/cover no-repeat fixed;
-    line-height: 1.6;   
-    
-}
 body {
     background-color: #0f0f0f;
     color: #ffffff;
     line-height: 1.6;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
+/* TITULOS */
 h1, h2, h3 {
-    font-family: 'Roboto', sans-serif; /* o cualquier otra fuente que quieras */
-    font-weight: 700; /* negrita para títulos */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
+/* PÁRRAFOS */
 p {
     font-family: 'Roboto', sans-serif;
-    font-weight: 400; /* normal para párrafos */
+    font-weight: 400;
 }
 
+/* ===================== LAYOUT ===================== */
 .layout {
     display: flex;
     min-height: 100vh;
 }
 
-/* HERO */
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 250px;
+    background: #0b0b0b;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 30px 20px;
+    z-index: 1000;
+}
+
+.sidebar h3 {
+    color: #5fd3ff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #5fd3ff;
+}
+
+/* CONTENIDO PRINCIPAL */
+.content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
+
+/* ===================== HERO ===================== */
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
@@ -52,7 +87,7 @@ p {
 .slogan {
     margin: 15px 0;
     font-size: 1.2rem;
-    color: #00aaff;
+    color: #00aaff; /* Puedes cambiar el color del slogan */
 }
 
 .btn {
@@ -71,20 +106,21 @@ p {
     background: #008ecc;
 }
 
-/* SECCIONES */
+/* ===================== SECCIONES ===================== */
 section {
     padding: 80px 10%;
+    box-sizing: border-box;
 }
 
 .container {
     max-width: 1100px;
     margin: auto;
+    text-align: center;
 }
 
-/* ABOUT */
+/* ===== ABOUT ===== */
 .about {
     background-color: #CFC3B6;
-    text-align: center;
 }
 
 .about h2 {
@@ -94,21 +130,17 @@ section {
 }
 
 .about p {
-    color: #000000; /* negro puro */
+    color: #000;
     font-size: 18px;
 }
-/* Fondo parallax para Servicios y Proceso */
-.services {
-    background: transparent;  /* elimina fondo propio */
-    text-align: center;
-}
 
-.service-card p {
-       color: #cccccc;
+/* ===== SERVICIOS ===== */
+.services {
+    background: transparent;
 }
 
 .services h2 {
-    color: #f4b400; /* gris-beige */
+    color: #f4b400; /* Gris-beige */
     font-size: 36px;
     text-align: center;
 }
@@ -117,28 +149,29 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    margin-top: 40px;
 }
-/* SERVICIOS */
+
 .service-card {
     position: relative;
     background: #1c1c1c;
     padding: 30px;
     border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: pointer;
     overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .service-card i {
-    color: #f4b400;      /* dorado como los títulos */
+    color: #f4b400;
     margin-bottom: 15px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .service-card:hover i {
     transform: scale(1.2);
-    color: #00aaff;      /* cambia de color al pasar mouse */
+    color: #00aaff;
 }
 
 .service-card::after {
@@ -165,19 +198,22 @@ section {
 }
 
 .service-card h3 {
-    color: #f4b400 !important; /* fuerza dorado */
+    color: #f4b400 !important;
 }
-/* PROCESO */
+
+.service-card p {
+    color: #cccccc;
+}
+
+/* ===================== PROCESO ===================== */
 .process {
-    background: transparent;  /* elimina fondo propio */
-    text-align: center;
+    background: transparent;
 }
 
 .process .section-title {
-    text-align: center;
-   font-size: 36px;
-   color: #f4b400; /* gris-beige */
-
+    font-size: 36px;
+    color: #f4b400;
+    margin-bottom: 40px;
 }
 
 .process-grid {
@@ -186,38 +222,23 @@ section {
     gap: 30px;
 }
 
-/* PROCESO */
 .process-step {
     position: relative;
     background: #1c1c1c;
     padding: 30px 20px;
     border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #cccccc;
 }
-.process-step {
+
+.process-step span {
     color: #cccccc;
 }
 
 .process-step p {
-    color: #cccccc; /* gris claro para párrafos y números */
-}
-
-.process-step::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 60%);
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none;
-}
-.process-step span {
     color: #cccccc;
 }
 
@@ -235,149 +256,21 @@ section {
     color: #f4b400 !important;
 }
 
-/* CONTACTO */
-.contact {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('../images/process-bg.jpg') center/cover no-repeat;
-    text-align: center;
+/* ===================== CALCULADORAS ===================== */
+#calculadoras {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
 }
 
-.contact p {
-    color: #cccccc;
-}
-
-.contact h2 {
-    color: #00aaff;
-}
-
-/* FOOTER */
-footer {
-    background: #000;
-    text-align: center;
-    padding: 20px;
-    color: #00aaff;
-}
-
-/* ANIMACIONES SCROLL */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px); /* solo Y */
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.reveal.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* ===== SIDEBAR ===== */
-
-.layout {
-    display: flex;
-}
-
-.sidebar {
-    width: 250px;
-    background: #0b0b0b;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    padding: 30px 20px;
-}
-
-
-.sidebar h3 {
-    color: #5fd3ff;
-    margin-bottom: 30px;
-}
-
-.sidebar a {
-    display: block;
-    color: #ccc;
-    text-decoration: none;
-    margin-bottom: 15px;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    color: #5fd3ff;
-
-}
-.btn-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 25px;
-    padding: 14px 28px;
-    background: #25D366;
-    color: #000;
-    font-weight: bold;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-whatsapp:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
-}
-
-.btn-whatsapp i {
-    font-size: 20px;
-
-}
-    h1, h2, h3 {
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-p {
-    font-weight: 400;
-    color: #cccccc;
-}
-
-.service-card h3,
-.process-step h3 {
-    color: #f4b400;
-}
-
-.process-step p,
-.service-card p {
-    color: #dddddd;
-}
-    
 #calculadoras .service-card {
-    background: #1c1c1c;
-    padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 25px;
 }
 
-#calculadoras input {
-    padding: 8px;
-    border-radius: 8px;
-    border: none;
-    width: 100%;
-}
-
-#calculadoras button {
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 20px;
-    background: #f4b400;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#calculadoras button:hover {
-    background: #e1a600;
-/* FILAS DE INPUTS FLEX */
 .input-row {
     display: flex;
     align-items: center;
@@ -398,21 +291,19 @@ p {
     color: #ffffff;
 }
 
-.service-card button {
+#calculadoras button {
     margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #00aaff;
-    color: #000;
-    border: none;
+    padding: 10px;
     border-radius: 20px;
+    background: #f4b400;
+    color: #000;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s;
 }
 
-.service-card button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,170,255,0.5);
+#calculadoras button:hover {
+    background: #e1a600;
 }
 
 #resultadoConcreto, #resultadoMortero {
@@ -421,7 +312,93 @@ p {
     font-weight: bold;
 }
 
+/* ===================== CONTACTO ===================== */
+.contact {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('../images/process-bg.jpg') center/cover no-repeat;
+    text-align: center;
+}
 
+.contact h2 {
+    color: #f4b400;
+    margin-bottom: 20px;
+}
 
+.contact p {
+    color: #cccccc;
+}
 
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #25D366;
+    color: #000;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.btn-whatsapp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    color: #00aaff;
+}
+
+/* ===================== ANIMACIONES ===================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 200px;
+        padding: 20px;
+    }
+    .content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+    #calculadoras {
+        grid-template-columns: 1fr;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+}
