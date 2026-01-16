@@ -117,15 +117,15 @@
   <div class="container">
     <h2>Calculadora de Materiales</h2>
     <form id="calcForm">
-      <label for="largo">Largo (m):</label>
-      <input type="number" id="largo" required>
+      <label>Largo (m):</label>
+<input type="number" id="largo" min="0" step="0.01" placeholder="Ej: 2.5">
+        
+      <label>ancho (m):</label>
+<input type="number" id="ancho" min="0" step="0.01" placeholder="Ej: 2.5">
 
-      <label for="ancho">Ancho (m):</label>
-      <input type="number" id="ancho" required>
-
-      <label for="altura">Altura (m):</label>
-      <input type="number" id="altura" required>
-
+     <label>alto (m):</label>
+<input type="number" id="alto" min="0" step="0.01" placeholder="Ej: 2.5">
+        
       <button type="submit">Calcular</button>
     </form>
 
@@ -175,13 +175,13 @@ document.querySelectorAll('.reveal').forEach(el => {
 document.getElementById('calcForm').addEventListener('submit', function(e){
     e.preventDefault();
 
-    const largo = parseFloat(document.getElementById('largo').value);
-    const ancho = parseFloat(document.getElementById('ancho').value);
-    const altura = parseFloat(document.getElementById('altura').value);
+ const largo = parseFloat(document.getElementById('largo').value);
+const ancho = parseFloat(document.getElementById('ancho').value);
+const alto = parseFloat(document.getElementById('alto').value);
 
-    const volumen = largo * ancho * altura; // m³
-    const cemento = volumen * 7; // bolsas aproximadas por m³
-    const arena = volumen * 0.5; // m³ de arena por m³ de concreto
+const volumen = largo * ancho * alto; // m³ con decimales
+const cemento = volumen * 7; // bolsas, por ejemplo
+const arena = volumen * 0.5; // m³
 
     document.getElementById('resultado').innerHTML = `
       <p>Volumen: ${volumen.toFixed(2)} m³</p>
