@@ -384,9 +384,7 @@ p {
 
 #calculadoras button:hover {
     background: #e1a600;
-
-}
-
+/* FILAS DE INPUTS FLEX */
 .input-row {
     display: flex;
     align-items: center;
@@ -394,18 +392,42 @@ p {
 }
 
 .input-row label {
-    width: 80px;   /* ancho fijo para labels */
+    width: 80px;
     color: #cccccc;
 }
 
 .input-row input {
-    flex: 1;      /* ocupa el resto del espacio */
+    flex: 1;
     padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid #444;
     background-color: #1c1c1c;
     color: #ffffff;
 }
+
+.service-card button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,170,255,0.5);
+}
+
+#resultadoConcreto, #resultadoMortero {
+    margin-top: 10px;
+    color: #cccccc;
+    font-weight: bold;
+}
+
 
 
 
