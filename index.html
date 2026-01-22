@@ -26,7 +26,7 @@
     </aside>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="content shared-bg">
+    <main class="content">
 
         <!-- HERO -->
         <header class="hero" id="inicio">
@@ -197,45 +197,6 @@
   </div>
 </div>
 
-<script>
-/* Animación Scroll */
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
-    });
-});
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-/* Modal Cotización */
-function abrirCotizacion() { document.getElementById("cotizacionModal").classList.remove("hidden"); }
-function cerrarCotizacion() { document.getElementById("cotizacionModal").classList.add("hidden"); }
-
-/* Calculadoras */
-function calcularConcreto() {
-    const l = parseFloat(document.getElementById('largoConcreto').value);
-    const a = parseFloat(document.getElementById('anchoConcreto').value);
-    const h = parseFloat(document.getElementById('altoConcreto').value);
-    if (isNaN(l) || isNaN(a) || isNaN(h)) return alert("Ingresa todos los valores");
-    const vol = l*a*h;
-    document.getElementById('resultadoConcreto').innerHTML = `
-        <p>Volumen: ${vol.toFixed(2)} m³</p>
-        <p>Cemento: ${(vol*7).toFixed(2)} bolsas</p>
-        <p>Arena: ${(vol*0.5).toFixed(2)} m³</p>
-        <p>Grava: ${(vol*0.8).toFixed(2)} m³</p>
-    `;
-}
-function calcularMortero() {
-    const l = parseFloat(document.getElementById('largoMortero').value);
-    const a = parseFloat(document.getElementById('anchoMortero').value);
-    const h = parseFloat(document.getElementById('altoMortero').value);
-    if (isNaN(l) || isNaN(a) || isNaN(h)) return alert("Ingresa todos los valores");
-    const vol = l*a*h;
-    document.getElementById('resultadoMortero').innerHTML = `
-        <p>Volumen: ${vol.toFixed(2)} m³</p>
-        <p>Cemento: ${(vol*8).toFixed(2)} bolsas</p>
-        <p>Arena: ${(vol*0.6).toFixed(2)} m³</p>
-    `;
-}
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
