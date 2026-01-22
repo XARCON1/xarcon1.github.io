@@ -26,6 +26,19 @@ body {color:#fff; line-height:1.6;}
     z-index: 1000;
     box-shadow: 0 3px 10px rgba(0,0,0,0.4);
 }
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centrar horizontalmente si quieres */
+    gap: 10px; /* espacio entre imagen y texto */
+    margin-bottom: 30px;
+}
+
+.sidebar-logo img {
+    width: 40px; /* ajusta según necesites */
+    height: 40px; 
+    object-fit: contain;
+}
 
 .sidebar h3 {
     color: #5fd3ff;
