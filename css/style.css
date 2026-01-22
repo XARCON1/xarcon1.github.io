@@ -35,8 +35,8 @@ body {color:#fff; line-height:1.6;}
 }
 
 .sidebar-logo img {
-    width: 40px; /* ajusta según necesites */
-    height: 40px; 
+    width: 60px; /* ajusta según necesites */
+    height: 60px; 
     object-fit: contain;
 }
 
