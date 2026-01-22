@@ -83,4 +83,3 @@ footer{background:#000; text-align:center; padding:20px; color:#00aaff;}
 .modal-content button{background:#1e3a8a; color:#fff; border:none; padding:12px; border-radius:10px; cursor:pointer;}
 .modal-content button:hover{background:#162f6a;}
 @keyframes fadeIn{from{opacity:0; transform:scale(.9);} to{opacity:1; transform:scale(1);}}
-/* ===== ANIMACIÓN DE LUZ EN CARDS ===== */
