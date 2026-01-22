@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <title>XARCON | Ingeniería · Arquitectura · Construcción</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="XARCON es una empresa de ingeniería, arquitectura y construcción enfocada en soluciones técnicas y gestión de proyectos.">
-
+    <meta name="description" content="XARCON es una empresa de ingeniería, arquitectura y construcción enfocada en soluciones técnicas, diseño profesional y gestión de proyectos.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <div class="layout">
@@ -23,197 +20,185 @@
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
             <a href="#proceso">Proceso</a>
-            <a href="#calculadora">Calculadoras</a>
+            <a href="#calculadora">Calculadora</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </aside>
 
-    <!-- CONTENIDO -->
-    <main class="content">
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content shared-bg">
 
         <!-- HERO -->
         <header class="hero" id="inicio">
-            <div>
+            <div class="hero-content">
                 <h1>XARCON</h1>
                 <p class="slogan">Donde el diseño se vuelve estructura</p>
                 <a href="#servicios" class="btn">Nuestros Servicios</a>
             </div>
         </header>
 
-        <!-- ABOUT -->
+        <!-- QUIÉNES SOMOS -->
         <section class="about reveal">
             <div class="container">
                 <h2>Quiénes Somos</h2>
                 <p>
                     XARCON es una empresa dedicada a la ingeniería, arquitectura y construcción,
-                    enfocada en soluciones técnicas, diseño profesional y gestión eficiente de obras.
+                    enfocada en el desarrollo de proyectos técnicos, diseño profesional
+                    y gestión de obras.
                 </p>
             </div>
         </section>
 
-        <!-- ===== FONDO COMPARTIDO ===== -->
-        <div class="shared-bg">
-
-            <!-- SERVICIOS -->
-            <section id="servicios" class="services reveal">
-                <div class="container">
-                    <h2>Servicios</h2>
-
-                    <div class="services-grid">
-
-                        <div class="service-card" onclick="abrirCotizacion()">
-                            <i class="fa-solid fa-file-invoice-dollar fa-2x"></i>
-                            <h3>Presupuesto de Obra</h3>
-                            <p>Estimación profesional de costos.</p>
-                        </div>
-
-                        <div class="service-card">
-                            <i class="fa-solid fa-drafting-compass fa-2x"></i>
-                            <h3>Diseño Arquitectónico</h3>
-                            <p>Planos, modelado 3D y renders.</p>
-                        </div>
-
-                        <div class="service-card">
-                            <i class="fa-solid fa-cogs fa-2x"></i>
-                            <h3>Ingeniería</h3>
-                            <p>Cálculos estructurales y sanitarios.</p>
-                        </div>
-
-                        <div class="service-card">
-                            <i class="fa-solid fa-hard-hat fa-2x"></i>
-                            <h3>Construcción</h3>
-                            <p>Gestión y supervisión técnica.</p>
-                        </div>
-
+        <!-- SERVICIOS -->
+        <section id="servicios" class="services reveal">
+            <div class="container">
+                <h2>Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-card" onclick="abrirCotizacion()">
+                        <i class="fa-solid fa-calculator fa-2x"></i>
+                        <h3>Presupuesto de Obra</h3>
+                        <p>Estimación profesional de costos.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fa-solid fa-drafting-compass fa-2x"></i>
+                        <h3>Diseño Arquitectónico</h3>
+                        <p>Planos, modelado 3D, renders y diseño funcional.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fa-solid fa-cogs fa-2x"></i>
+                        <h3>Ingeniería</h3>
+                        <p>Cálculos estructurales, sanitarios y eléctricos.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fa-solid fa-hard-hat fa-2x"></i>
+                        <h3>Construcción & Ejecución</h3>
+                        <p>Gestión de obras y supervisión técnica.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- PROCESO -->
-            <section id="proceso" class="process reveal">
-                <div class="container">
-                    <h2 class="section-title">Nuestro Proceso</h2>
-
-                    <div class="process-grid">
-                        <div class="process-step">
-                            <span>01</span>
-                            <h3>Diagnóstico</h3>
-                            <p>Análisis del proyecto.</p>
-                        </div>
-                        <div class="process-step">
-                            <span>02</span>
-                            <h3>Planificación</h3>
-                            <p>Costos y cronograma.</p>
-                        </div>
-                        <div class="process-step">
-                            <span>03</span>
-                            <h3>Diseño</h3>
-                            <p>Planos y cálculos.</p>
-                        </div>
-                        <div class="process-step">
-                            <span>04</span>
-                            <h3>Ejecución</h3>
-                            <p>Supervisión de obra.</p>
-                        </div>
+        <!-- PROCESO -->
+        <section id="proceso" class="process reveal">
+            <div class="container">
+                <h2 class="section-title">Nuestro Proceso de Trabajo</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <span class="step-number">01</span>
+                        <h3>Diagnóstico</h3>
+                        <p>Análisis del proyecto y necesidades.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">02</span>
+                        <h3>Planificación</h3>
+                        <p>Definición de costos y cronograma.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">03</span>
+                        <h3>Diseño</h3>
+                        <p>Planos, cálculos y especificaciones.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-number">04</span>
+                        <h3>Ejecución</h3>
+                        <p>Supervisión y control de obra.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- CALCULADORAS -->
-            <section id="calculadora" class="services reveal">
-                <div class="container">
-                    <h2>Calculadora de Materiales</h2>
-
-                    <div class="services-grid">
-
-                        <!-- CONCRETO -->
-                        <div class="service-card">
-                            <h3>Concreto</h3>
-
-                            <div class="input-row">
-                                <label>Largo</label>
-                                <input type="number" id="largoConcreto" step="0.01">
-                            </div>
-                            <div class="input-row">
-                                <label>Ancho</label>
-                                <input type="number" id="anchoConcreto" step="0.01">
-                            </div>
-                            <div class="input-row">
-                                <label>Alto</label>
-                                <input type="number" id="altoConcreto" step="0.01">
-                            </div>
-
-                            <button onclick="calcularConcreto()">Calcular</button>
-                            <div id="resultadoConcreto"></div>
+        <!-- CALCULADORAS -->
+        <section id="calculadora" class="services reveal">
+            <div class="container">
+                <h2>Calculadora de Materiales</h2>
+                <div class="services-grid">
+                    <!-- Concreto -->
+                    <div class="service-card">
+                        <h3>Concreto</h3>
+                        <div class="input-row">
+                            <label>Largo (m)</label>
+                            <input type="number" id="largoConcreto" min="0" step="0.01" placeholder="Ej: 2.5">
                         </div>
-
-                        <!-- MORTERO -->
-                        <div class="service-card">
-                            <h3>Mortero</h3>
-
-                            <div class="input-row">
-                                <label>Largo</label>
-                                <input type="number" id="largoMortero" step="0.01">
-                            </div>
-                            <div class="input-row">
-                                <label>Ancho</label>
-                                <input type="number" id="anchoMortero" step="0.01">
-                            </div>
-                            <div class="input-row">
-                                <label>Alto</label>
-                                <input type="number" id="altoMortero" step="0.01">
-                            </div>
-
-                            <button onclick="calcularMortero()">Calcular</button>
-                            <div id="resultadoMortero"></div>
+                        <div class="input-row">
+                            <label>Ancho (m)</label>
+                            <input type="number" id="anchoConcreto" min="0" step="0.01" placeholder="Ej: 1.5">
                         </div>
-
+                        <div class="input-row">
+                            <label>Alto (m)</label>
+                            <input type="number" id="altoConcreto" min="0" step="0.01" placeholder="Ej: 0.12">
+                        </div>
+                        <button onclick="calcularConcreto()">Calcular</button>
+                        <div id="resultadoConcreto"></div>
+                    </div>
+                    <!-- Mortero -->
+                    <div class="service-card">
+                        <h3>Mortero</h3>
+                        <div class="input-row">
+                            <label>Largo (m)</label>
+                            <input type="number" id="largoMortero" min="0" step="0.01" placeholder="Ej: 2.5">
+                        </div>
+                        <div class="input-row">
+                            <label>Ancho (m)</label>
+                            <input type="number" id="anchoMortero" min="0" step="0.01" placeholder="Ej: 1.5">
+                        </div>
+                        <div class="input-row">
+                            <label>Alto (m)</label>
+                            <input type="number" id="altoMortero" min="0" step="0.01" placeholder="Ej: 0.12">
+                        </div>
+                        <button onclick="calcularMortero()">Calcular</button>
+                        <div id="resultadoMortero"></div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- CONTACTO -->
-            <section id="contacto" class="contact reveal">
-                <div class="container">
-                    <h2>Contacto</h2>
-                    <p>Email: contacto@xarcon.com</p>
-                    <p>WhatsApp: +505 5852 0409</p>
+        <!-- CONTACTO -->
+        <section id="contacto" class="contact reveal">
+            <div class="container">
+                <h2>Contacto</h2>
+                <p>Email: contacto@xarcon.com</p>
+                <p>WhatsApp: +505 5852 0409</p>
+                <a href="https://wa.me/50558520409" class="btn-whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Agendar cita
+                </a>
+            </div>
+        </section>
 
-                    <a href="https://wa.me/50558520409?text=Hola%20XARCON,%20quiero%20información%20sobre%20mi%20proyecto"
-                       target="_blank"
-                       class="btn-whatsapp">
-                        <i class="fa-brands fa-whatsapp"></i> Agendar cita
-                    </a>
-                </div>
-            </section>
-
-        </div>
-
+        <!-- FOOTER -->
         <footer>
             <p>© 2026 XARCON. Todos los derechos reservados.</p>
         </footer>
-
     </main>
 </div>
 
-<!-- MODAL -->
+<!-- MODAL COTIZACIÓN -->
 <div id="cotizacionModal" class="modal hidden">
-    <div class="modal-content">
-        <span class="close-btn" onclick="cerrarCotizacion()">×</span>
-        <h2>Solicitar cotización</h2>
-
-        <form>
-            <input type="text" placeholder="Tipo de proyecto">
-            <input type="number" placeholder="Área aproximada (m²)">
-            <input type="text" placeholder="Ubicación">
-            <textarea placeholder="Describe tu proyecto"></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
+  <div class="modal-content">
+    <span class="close-btn" onclick="cerrarCotizacion()">×</span>
+    <h2>Solicitar cotización</h2>
+    <p>Cuéntanos sobre tu proyecto y te asesoramos gratis.</p>
+    <form>
+      <label>Tipo de proyecto</label>
+      <select>
+        <option>Vivienda</option>
+        <option>Remodelación</option>
+        <option>Presupuesto de obra</option>
+        <option>Diseño arquitectónico</option>
+        <option>Agua potable / Sanitaria</option>
+      </select>
+      <label>Área aproximada (m²)</label>
+      <input type="number" placeholder="Ej: 120">
+      <label>Ubicación del proyecto</label>
+      <input type="text" placeholder="Ciudad / Departamento">
+      <label>Comentario</label>
+      <textarea placeholder="Describe tu idea o necesidad"></textarea>
+      <button type="submit">Enviar solicitud</button>
+    </form>
+  </div>
 </div>
 
 <script>
-/* Animaciones */
+/* Animación Scroll */
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('show');
@@ -221,40 +206,36 @@ const observer = new IntersectionObserver(entries => {
 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-/* Modal */
-function abrirCotizacion() {
-    document.getElementById("cotizacionModal").classList.remove("hidden");
-}
-function cerrarCotizacion() {
-    document.getElementById("cotizacionModal").classList.add("hidden");
-}
+/* Modal Cotización */
+function abrirCotizacion() { document.getElementById("cotizacionModal").classList.remove("hidden"); }
+function cerrarCotizacion() { document.getElementById("cotizacionModal").classList.add("hidden"); }
 
 /* Calculadoras */
 function calcularConcreto() {
-    const l = +largoConcreto.value;
-    const a = +anchoConcreto.value;
-    const h = +altoConcreto.value;
-    const v = l * a * h;
-
-    resultadoConcreto.innerHTML = `
-        Volumen: ${v.toFixed(2)} m³<br>
-        Cemento: ${(v*7).toFixed(2)} bolsas<br>
-        Arena: ${(v*0.5).toFixed(2)} m³<br>
-        Grava: ${(v*0.8).toFixed(2)} m³`;
+    const l = parseFloat(document.getElementById('largoConcreto').value);
+    const a = parseFloat(document.getElementById('anchoConcreto').value);
+    const h = parseFloat(document.getElementById('altoConcreto').value);
+    if (isNaN(l) || isNaN(a) || isNaN(h)) return alert("Ingresa todos los valores");
+    const vol = l*a*h;
+    document.getElementById('resultadoConcreto').innerHTML = `
+        <p>Volumen: ${vol.toFixed(2)} m³</p>
+        <p>Cemento: ${(vol*7).toFixed(2)} bolsas</p>
+        <p>Arena: ${(vol*0.5).toFixed(2)} m³</p>
+        <p>Grava: ${(vol*0.8).toFixed(2)} m³</p>
+    `;
 }
-
 function calcularMortero() {
-    const l = +largoMortero.value;
-    const a = +anchoMortero.value;
-    const h = +altoMortero.value;
-    const v = l * a * h;
-
-    resultadoMortero.innerHTML = `
-        Volumen: ${v.toFixed(2)} m³<br>
-        Cemento: ${(v*8).toFixed(2)} bolsas<br>
-        Arena: ${(v*0.6).toFixed(2)} m³`;
+    const l = parseFloat(document.getElementById('largoMortero').value);
+    const a = parseFloat(document.getElementById('anchoMortero').value);
+    const h = parseFloat(document.getElementById('altoMortero').value);
+    if (isNaN(l) || isNaN(a) || isNaN(h)) return alert("Ingresa todos los valores");
+    const vol = l*a*h;
+    document.getElementById('resultadoMortero').innerHTML = `
+        <p>Volumen: ${vol.toFixed(2)} m³</p>
+        <p>Cemento: ${(vol*8).toFixed(2)} bolsas</p>
+        <p>Arena: ${(vol*0.6).toFixed(2)} m³</p>
+    `;
 }
 </script>
-
 </body>
 </html>
