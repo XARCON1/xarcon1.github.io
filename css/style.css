@@ -83,3 +83,60 @@ footer{background:#000; text-align:center; padding:20px; color:#00aaff;}
 .modal-content button{background:#1e3a8a; color:#fff; border:none; padding:12px; border-radius:10px; cursor:pointer;}
 .modal-content button:hover{background:#162f6a;}
 @keyframes fadeIn{from{opacity:0; transform:scale(.9);} to{opacity:1; transform:scale(1);}}
+
+/* ===== ANIMACIÓN DE LUZ EN CARDS ===== */
+.service-card {
+    position: relative;
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card i {
+    color: #f4b400;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-card:hover i {
+    transform: scale(1.2);
+    color: #00aaff;
+}
+
+/* Animación de luz radial */
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+}
+
+.service-card:hover::after {
+    opacity: 1;
+    transform: rotate(30deg);
+}
+
+/* Hover general de la card */
+.service-card:hover {
+    transform: translateY(-12px) scale(1.06);
+    box-shadow: 0 22px 55px rgba(0,0,0,0.65);
+}
+
+.service-card h3 {
+    color: #f4b400 !important;
+}
+
+.service-card p {
+    color: #cccccc;
+}
+
