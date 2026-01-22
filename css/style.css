@@ -1,183 +1,85 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
+/* ===================== RESET Y TIPOGRAFÍA ===================== */
+* {margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', Arial, Helvetica, sans-serif;}
+body {color:#fff; line-height:1.6;}
+.shared-bg {background:url('../images/service.jpg') center/cover fixed no-repeat;}
 
-body {
-    background: #0f0f0f;
-    color: #ffffff;
-    line-height: 1.6;
-}
+/* ===================== LAYOUT ===================== */
+.layout {display:flex; min-height:100vh;}
+.sidebar {width:250px; background:#0b0b0b; color:#fff; position:fixed; top:0; left:0; height:100vh; padding:30px 20px; z-index:1000;}
+.sidebar h3{text-align:center; color:#5fd3ff; margin-bottom:30px;}
+.sidebar a{display:block; color:#ccc; text-decoration:none; margin-bottom:15px; transition:.3s;}
+.sidebar a:hover{color:#5fd3ff;}
+.content {margin-left:250px; width:calc(100% - 250px);}
 
-/* LAYOUT */
-.layout {
-    display: flex;
-}
+/* ===================== HERO ===================== */
+.hero {height:100vh; background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('../images/city.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center;}
+.hero h1{color:#fff; font-size:4rem; letter-spacing:4px;}
+.slogan{margin:15px 0; font-size:1.2rem; color:#00aaff;}
+.btn{display:inline-block; margin-top:20px; padding:12px 30px; background:#00aaff; color:#000; border-radius:30px; text-decoration:none; font-weight:bold; transition:0.3s;}
+.btn:hover{background:#008ecc;}
 
-/* SIDEBAR */
-.sidebar {
-    width: 250px;
-    background: #0b0b0b;
-    position: fixed;
-    height: 100vh;
-    padding: 30px 20px;
-}
+/* ===================== SECCIONES ===================== */
+section{padding:80px 10%; box-sizing:border-box;}
+.container{max-width:1100px; margin:auto; text-align:center;}
+.about{background-color:#CFC3B6;}
+.about h2{color:#00aaff; font-size:36px; margin-bottom:20px;}
+.about p{color:#000; font-size:18px;}
 
-.sidebar h3 {
-    color: #5fd3ff;
-    text-align: center;
-    margin-bottom: 30px;
-}
+/* ===================== SERVICIOS ===================== */
+.services{background:transparent;}
+.services h2{color:#f4b400; font-size:36px;}
+.services-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:30px; margin-top:40px;}
+.service-card{background:#1c1c1c; padding:30px; border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,0.4); cursor:pointer; overflow:hidden; transition:transform .4s ease, box-shadow .4s ease;}
+.service-card i{color:#f4b400; margin-bottom:15px; transition:transform .3s ease, color .3s ease;}
+.service-card:hover i{transform:scale(1.2); color:#00aaff;}
+.service-card:hover{transform:translateY(-12px) scale(1.06); box-shadow:0 22px 55px rgba(0,0,0,0.65);}
+.service-card h3{color:#f4b400 !important;}
+.service-card p{color:#cccccc;}
 
-.sidebar a {
-    display: block;
-    color: #ccc;
-    text-decoration: none;
-    margin-bottom: 15px;
-}
+/* ===================== PROCESO ===================== */
+.process{background:transparent;}
+.process .section-title{font-size:36px; color:#f4b400; margin-bottom:40px;}
+.process-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:30px;}
+.process-step{background:#1c1c1c; padding:30px 20px; border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,0.4); cursor:pointer; overflow:hidden; transition:transform .3s ease, box-shadow .3s ease; color:#cccccc;}
+.process-step:hover{transform:translateY(-10px) scale(1.05); box-shadow:0 20px 50px rgba(0,0,0,0.55);}
+.process-step h3{color:#f4b400 !important;}
+.process-step p{color:#cccccc;}
 
-.sidebar a:hover {
-    color: #5fd3ff;
-}
+/* ===================== CALCULADORAS ===================== */
+#calculadora .services-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+#calculadora .service-card{display:flex; flex-direction:column; gap:10px; padding:25px;}
+.input-row{display:flex; align-items:center; margin-bottom:10px;}
+.input-row label{width:80px; color:#cccccc;}
+.input-row input{flex:1; padding:5px 10px; border-radius:5px; border:1px solid #444; background-color:#1c1c1c; color:#fff;}
+#calculadora button{margin-top:10px; padding:10px; border-radius:20px; background:#f4b400; color:#000; font-weight:bold; cursor:pointer; transition:0.3s;}
+#calculadora button:hover{background:#e1a600;}
+#resultadoConcreto,#resultadoMortero{margin-top:10px; color:#cccccc; font-weight:bold;}
 
-.content {
-    margin-left: 250px;
-    width: calc(100% - 250px);
-}
+/* ===================== CONTACTO ===================== */
+.contact{background:rgba(0,0,0,0.4); text-align:center; padding:80px 10%;}
+.contact h2{color:#f4b400; margin-bottom:20px;}
+.contact p{color:#cccccc;}
+.btn-whatsapp{display:inline-flex; align-items:center; gap:10px; margin-top:25px; padding:14px 28px; background:#25D366; color:#000; font-weight:bold; border-radius:30px; text-decoration:none; transition:0.3s;}
+.btn-whatsapp:hover{transform:scale(1.05); box-shadow:0 10px 30px rgba(37,211,102,0.5);}
 
-/* HERO */
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)),
-                url('../images/city.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+/* ===================== FOOTER ===================== */
+footer{background:#000; text-align:center; padding:20px; color:#00aaff;}
 
-.hero h1 {
-    font-size: 4rem;
-    letter-spacing: 4px;
-}
+/* ===================== ANIMACIONES ===================== */
+.reveal{opacity:0; transform:translateY(40px); transition:opacity .8s ease, transform .8s ease;}
+.reveal.show{opacity:1; transform:translateY(0);}
 
-.slogan {
-    color: #00aaff;
-    margin: 15px 0;
-}
-
-.btn {
-    background: #00aaff;
-    color: #000;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-}
-
-/* ABOUT */
-.about {
-    background: #CFC3B6;
-    color: #000;
-    padding: 80px 10%;
-    text-align: center;
-}
-
-/* FONDO COMPARTIDO */
-.shared-bg {
-    background:
-        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)),
-        url('../images/service.jpg') center/cover no-repeat fixed;
-}
-
-/* SECCIONES */
-section {
-    padding: 80px 10%;
-}
-
-.services,
-.process {
-    background: transparent;
-}
-
-.services-grid,
-.process-grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 30px;
-    margin-top: 40px;
-}
-
-/* CARDS */
-.service-card,
-.process-step {
-    background: #1c1c1c;
-    padding: 30px;
-    border-radius: 14px;
-    text-align: center;
-}
-
-.service-card h3,
-.process-step h3 {
-    color: #f4b400;
-}
-
-.service-card p {
-    color: #ccc;
-}
-
-/* CONTACTO */
-.contact {
-    background: rgba(0,0,0,.4);
-    text-align: center;
-}
-
-.btn-whatsapp {
-    background: #25D366;
-    color: #000;
-    padding: 14px 28px;
-    border-radius: 30px;
-    text-decoration: none;
-    display: inline-flex;
-    gap: 10px;
-}
-
-/* ANIMACIONES */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: .8s;
-}
-.reveal.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* MODAL */
-.modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.hidden { display:none; }
-
-.modal-content {
-    background: #fff;
-    color: #000;
-    padding: 30px;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 500px;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-    .layout{flex-direction:column}
-    .sidebar{position:relative;width:100%}
-    .content{margin-left:0;width:100%}
-    .services-grid,.process-grid{grid-template-columns:1fr}
-}
+/* ===================== RESPONSIVE ===================== */
+@media(max-width:992px){.sidebar{width:200px; padding:20px;}.content{margin-left:200px;width:calc(100% - 200px);}}
+@media(max-width:768px){.layout{flex-direction:column;}.sidebar{position:relative;width:100%;height:auto;}.content{margin-left:0;width:100%;} 
+#calculadora .services-grid,.services-grid,.process-grid{grid-template-columns:1fr;}}
+/* ===================== MODAL ===================== */
+.modal{position:fixed; inset:0; background:rgba(0,0,0,.65); display:flex; justify-content:center; align-items:center; z-index:9999;}
+.hidden{display:none;}
+.modal-content{background:rgba(255,255,255,.95); padding:30px; width:90%; max-width:500px; border-radius:15px; position:relative; animation:fadeIn .4s ease;}
+.close-btn{position:absolute; top:15px; right:20px; font-size:28px; cursor:pointer;}
+.modal-content form{display:flex; flex-direction:column; gap:12px;}
+.modal-content input, .modal-content textarea, .modal-content select{padding:10px; border-radius:8px; border:1px solid #ccc;}
+.modal-content button{background:#1e3a8a; color:#fff; border:none; padding:12px; border-radius:10px; cursor:pointer;}
+.modal-content button:hover{background:#162f6a;}
+@keyframes fadeIn{from{opacity:0; transform:scale(.9);} to{opacity:1; transform:scale(1);}}
