@@ -4,12 +4,59 @@ body {color:#fff; line-height:1.6;}
 .shared-bg {background:url('../images/service.jpg') center/cover fixed no-repeat;}
 
 /* ===================== LAYOUT ===================== */
-.layout {display:flex; min-height:100vh;}
-.sidebar {width:250px; background:#0b0b0b; color:#fff; position:fixed; top:0; left:0; height:100vh; padding:30px 20px; z-index:1000;}
-.sidebar h3{text-align:center; color:#5fd3ff; margin-bottom:30px;}
-.sidebar a{display:block; color:#ccc; text-decoration:none; margin-bottom:15px; transition:.3s;}
-.sidebar a:hover{color:#5fd3ff;}
-.content {margin-left:250px; width:calc(100% - 250px);}
+.layout {
+    display: flex;
+    flex-direction: column; /* ahora será vertical para hero y secciones */
+    min-height: 100vh;
+}
+
+/* ===================== NAVBAR HORIZONTAL ===================== */
+.sidebar {
+    width: 100%;
+    height: 70px;
+    background: #0b0b0b;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+
+.sidebar h3 {
+    color: #5fd3ff;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.sidebar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.sidebar a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.sidebar a:hover {
+    color: #5fd3ff;
+    background: rgba(95,211,255,0.1);
+}
+
+/* CONTENIDO PRINCIPAL */
+.content {
+    margin-top: 70px; /* espacio debajo del navbar horizontal */
+    width: 100%;
+}
 
 /* ===================== HERO ===================== */
 .hero {height:100vh; background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('../images/city.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center;}
@@ -70,9 +117,16 @@ footer{background:#000; text-align:center; padding:20px; color:#00aaff;}
 .reveal.show{opacity:1; transform:translateY(0);}
 
 /* ===================== RESPONSIVE ===================== */
-@media(max-width:992px){.sidebar{width:200px; padding:20px;}.content{margin-left:200px;width:calc(100% - 200px);}}
-@media(max-width:768px){.layout{flex-direction:column;}.sidebar{position:relative;width:100%;height:auto;}.content{margin-left:0;width:100%;} 
-#calculadora .services-grid,.services-grid,.process-grid{grid-template-columns:1fr;}}
+@media(max-width:992px){
+    .sidebar {flex-direction:column; height:auto; padding:20px;}
+    .sidebar nav {flex-direction:column; gap:10px;}
+}
+@media(max-width:768px){
+    .sidebar {flex-direction:column; height:auto; padding:15px;}
+    .sidebar nav {flex-direction:column; gap:10px;}
+    #calculadora .services-grid,.services-grid,.process-grid{grid-template-columns:1fr;}
+}
+
 /* ===================== MODAL ===================== */
 .modal{position:fixed; inset:0; background:rgba(0,0,0,.65); display:flex; justify-content:center; align-items:center; z-index:9999;}
 .hidden{display:none;}
@@ -126,17 +180,10 @@ footer{background:#000; text-align:center; padding:20px; color:#00aaff;}
     transform: rotate(30deg);
 }
 
-/* Hover general de la card */
 .service-card:hover {
     transform: translateY(-12px) scale(1.06);
     box-shadow: 0 22px 55px rgba(0,0,0,0.65);
 }
 
-.service-card h3 {
-    color: #f4b400 !important;
-}
-
-.service-card p {
-    color: #cccccc;
-}
-
+.service-card h3 {color: #f4b400 !important;}
+.service-card p {color: #cccccc;}
