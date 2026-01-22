@@ -54,6 +54,11 @@
                 <h2>Servicios</h2>
 
                 <div class="services-grid">
+                    <div class="service-card" onclick="abrirCotizacion()">
+  <h3>Presupuesto de Obra</h3>
+  <p>Estimación profesional de costos.</p>
+</div>
+
                     <div class="service-card">
                         <i class="fa-solid fa-drafting-compass fa-2x"></i>
                         <h3>Diseño Arquitectónico</h3>
@@ -252,6 +257,46 @@ function calcularMortero() {
         <p>Arena: ${arena.toFixed(2)} m³</p>
     `;
 }
+</script>
+<!-- MODAL COTIZACIÓN -->
+<div id="cotizacionModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-btn" onclick="cerrarCotizacion()">×</span>
+
+    <h2>Solicitar cotización</h2>
+    <p>Cuéntanos sobre tu proyecto y te asesoramos gratis.</p>
+
+    <form>
+      <label>Tipo de proyecto</label>
+      <select>
+        <option>Vivienda</option>
+        <option>Remodelación</option>
+        <option>Presupuesto de obra</option>
+        <option>Diseño arquitectónico</option>
+        <option>Agua potable / Sanitaria</option>
+      </select>
+
+      <label>Área aproximada (m²)</label>
+      <input type="number" placeholder="Ej: 120">
+
+      <label>Ubicación del proyecto</label>
+      <input type="text" placeholder="Ciudad / Departamento">
+
+      <label>Comentario</label>
+      <textarea placeholder="Describe tu idea o necesidad"></textarea>
+
+      <button type="submit">Enviar solicitud</button>
+    </form>
+  </div>
+</div>
+    <script>
+  function abrirCotizacion() {
+    document.getElementById("cotizacionModal").classList.remove("hidden");
+  }
+
+  function cerrarCotizacion() {
+    document.getElementById("cotizacionModal").classList.add("hidden");
+  }
 </script>
 
 
