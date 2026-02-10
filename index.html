@@ -24,6 +24,7 @@
         <a href="#inicio">Inicio</a>
         <a href="#servicios">Servicios</a>
         <a href="#proceso">Proceso</a>
+        <a href="#testimonios">Testimonios</a>
         <a href="#contacto">Contacto</a>
     </nav>
 </aside>
@@ -155,6 +156,39 @@
             </div>
         </section>
 
+        <!-- TESTIMONIOS -->
+        <section id="testimonios" class="testimonials reveal">
+            <div class="container">
+                <h2>Testimonios</h2>
+                <p class="testimonials-subtitle">Clientes que confiaron en XARCON para diseñar y construir con calidad.</p>
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <p class="testimonial-text">“Nos ayudaron a convertir nuestro plano inicial en una casa funcional y elegante, cuidando cada detalle técnico.”</p>
+                        <h3>María Gutiérrez</h3>
+                        <p class="testimonial-role">Proyecto residencial · Managua</p>
+                        <p class="testimonial-more hidden-text">El equipo propuso soluciones de distribución y estructura que redujeron costos sin comprometer el diseño. La ejecución fue puntual y transparente.</p>
+                        <button class="testimonial-btn" type="button" aria-expanded="false">Ver historia</button>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <p class="testimonial-text">“La asesoría en presupuesto y cronograma nos permitió avanzar con seguridad desde la primera etapa.”</p>
+                        <h3>Carlos Mena</h3>
+                        <p class="testimonial-role">Remodelación comercial · León</p>
+                        <p class="testimonial-more hidden-text">Desde el levantamiento inicial hasta los acabados, recibimos reportes claros y recomendaciones técnicas clave para evitar retrasos.</p>
+                        <button class="testimonial-btn" type="button" aria-expanded="false">Ver historia</button>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <p class="testimonial-text">“Destaco su profesionalismo en cálculos estructurales y supervisión de obra. Excelente acompañamiento.”</p>
+                        <h3>Ana Pineda</h3>
+                        <p class="testimonial-role">Edificación mixta · Masaya</p>
+                        <p class="testimonial-more hidden-text">Mantuvieron una comunicación constante con nuestro equipo y garantizaron que cada fase cumpliera con estándares de seguridad y calidad.</p>
+                        <button class="testimonial-btn" type="button" aria-expanded="false">Ver historia</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- CONTACTO -->
         <section id="contacto" class="contact reveal">
             <div class="container">
@@ -208,6 +242,19 @@ const observer = new IntersectionObserver(entries => {
     });
 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* Botones interactivos en testimonios */
+document.querySelectorAll('.testimonial-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const card = button.closest('.testimonial-card');
+        const extra = card.querySelector('.testimonial-more');
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+
+        extra.classList.toggle('hidden-text', expanded);
+        button.setAttribute('aria-expanded', String(!expanded));
+        button.textContent = expanded ? 'Ver historia' : 'Ocultar historia';
+    });
+});
 
 /* Modal Cotización */
 function abrirCotizacion() { document.getElementById("cotizacionModal").classList.remove("hidden"); }
