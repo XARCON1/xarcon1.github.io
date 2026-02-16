@@ -13,7 +13,7 @@
 <header class="site-header">
   <div class="nav-wrapper">
     <a class="brand" href="index.html"><img src="images/favicon.png" alt="Logo XARCON"><strong>XARCON</strong></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú"><span></span></button>
     <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
       <a class="active" href="index.html">Inicio</a>
       <a href="about.html">Quiénes Somos</a>
@@ -26,38 +26,108 @@
 
 <main id="contenido">
   <section class="hero">
-    <h1>XARCON</h1>
-    <p>Soluciones integrales de arquitectura, ingeniería y construcción para proyectos residenciales, comerciales e industriales.</p>
-    <a class="btn" href="services.html">Ver servicios profesionales</a>
+    <div class="hero-content">
+      <h1>Diseñamos y construimos proyectos que elevan tu inversión</h1>
+      <p>En XARCON unimos arquitectura, ingeniería y ejecución con estándares profesionales para entregar obras modernas, eficientes y duraderas.</p>
+      <a class="btn" href="contact.html">Solicitar asesoría profesional</a>
+    </div>
   </section>
 
   <section class="section">
-    <h2>Construimos con planificación y calidad</h2>
-    <div class="grid two">
-      <article class="card">
-        <h3>Experiencia multidisciplinaria</h3>
-        <p>Integramos diseño arquitectónico, análisis técnico y ejecución de obra en un flujo coordinado que reduce riesgos y mejora resultados.</p>
+    <h2>Resultados que respaldan nuestro trabajo</h2>
+    <div class="grid four">
+      <article class="card stats">
+        <p class="stat-number" data-counter="120">0</p>
+        <p class="stat-label">Proyectos completados</p>
       </article>
-      <article class="card">
-        <h3>Atención personalizada</h3>
-        <p>Escuchamos tus necesidades y proponemos soluciones viables de acuerdo a presupuesto, alcance y tiempos de entrega.</p>
+      <article class="card stats">
+        <p class="stat-number" data-counter="18">0</p>
+        <p class="stat-label">Años de experiencia</p>
+      </article>
+      <article class="card stats">
+        <p class="stat-number" data-counter="85">0</p>
+        <p class="stat-label">Clientes atendidos</p>
+      </article>
+      <article class="card stats">
+        <p class="stat-number" data-counter="45000" data-suffix=" m²">0</p>
+        <p class="stat-label">M² construidos</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Servicios especializados</h2>
+    <div class="grid two">
+      <article class="card service-card">
+        <h3>Diseño Arquitectónico</h3>
+        <p>Conceptualización, planos y modelado enfocados en funcionalidad, estética y normativa.</p>
+        <a class="btn btn-outline" href="services/architecture.html">Ver detalle</a>
+      </article>
+      <article class="card service-card">
+        <h3>Ingeniería Integral</h3>
+        <p>Soluciones estructurales, eléctricas e hidrosanitarias coordinadas para obra segura.</p>
+        <a class="btn btn-outline" href="services/engineering.html">Ver detalle</a>
+      </article>
+      <article class="card service-card">
+        <h3>Presupuestos y Planificación</h3>
+        <p>Estimación financiera, programación y control de costos desde el inicio del proyecto.</p>
+        <a class="btn btn-outline" href="services/budget.html">Ver detalle</a>
+      </article>
+      <article class="card service-card">
+        <h3>Construcción y Supervisión</h3>
+        <p>Ejecución profesional con control de calidad, seguridad y seguimiento permanente.</p>
+        <a class="btn btn-outline" href="services/construction.html">Ver detalle</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Proyectos destacados</h2>
+    <p>Filtra por tipo de proyecto y amplía cada imagen para verla en detalle.</p>
+    <div class="filter-buttons" aria-label="Filtro de galería">
+      <button class="active" type="button" data-filter="all">Todos</button>
+      <button type="button" data-filter="residencial">Residencial</button>
+      <button type="button" data-filter="comercial">Comercial</button>
+      <button type="button" data-filter="industrial">Industrial</button>
+    </div>
+    <div class="gallery-grid">
+      <article class="gallery-item" data-category="residencial"><div class="gallery-card"><img src="images/city.jpg" alt="Proyecto residencial moderno" data-caption="Residencial premium en Managua"></div></article>
+      <article class="gallery-item" data-category="comercial"><div class="gallery-card"><img src="images/service.jpg" alt="Centro comercial estructural" data-caption="Complejo comercial de alta circulación"></div></article>
+      <article class="gallery-item" data-category="industrial"><div class="gallery-card"><img src="images/city.jpg" alt="Nave industrial" data-caption="Planta industrial con diseño eficiente"></div></article>
+      <article class="gallery-item" data-category="residencial"><div class="gallery-card"><img src="images/service.jpg" alt="Conjunto habitacional" data-caption="Conjunto habitacional vertical"></div></article>
+      <article class="gallery-item" data-category="comercial"><div class="gallery-card"><img src="images/city.jpg" alt="Edificio corporativo" data-caption="Edificio corporativo sostenible"></div></article>
+      <article class="gallery-item" data-category="industrial"><div class="gallery-card"><img src="images/service.jpg" alt="Plataforma logística" data-caption="Centro logístico y distribución"></div></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Indicadores de crecimiento</h2>
+    <div class="chart-grid">
+      <article class="card chart-card">
+        <h3>Crecimiento anual de proyectos</h3>
+        <canvas id="annualGrowthChart" aria-label="Gráfico de barras de crecimiento anual"></canvas>
+      </article>
+      <article class="card chart-card">
+        <h3>Distribución de servicios</h3>
+        <canvas id="serviceDistributionChart" aria-label="Gráfico circular de distribución de servicios"></canvas>
       </article>
     </div>
   </section>
 </main>
 
+<div class="lightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="Cerrar imagen">×</button>
+  <figure>
+    <img src="" alt="Vista ampliada del proyecto">
+    <figcaption></figcaption>
+  </figure>
+</div>
+
 <footer>
   <p>© 2026 XARCON. Todos los derechos reservados.</p>
 </footer>
 
-<script>
-const btn = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.main-nav');
-btn?.addEventListener('click', () => {
-  const expanded = btn.getAttribute('aria-expanded') === 'true';
-  btn.setAttribute('aria-expanded', String(!expanded));
-  nav.classList.toggle('open');
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
