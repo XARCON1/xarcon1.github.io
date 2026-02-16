@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XARCON | Diseño Arquitectónico</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="nav-wrapper">
+    <a class="brand" href="../index.html"><img src="../images/favicon.png" alt="Logo XARCON"><strong>XARCON</strong></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+      <a href="../index.html">Inicio</a><a href="../about.html">Quiénes Somos</a><a class="active" href="../services.html">Servicios</a><a href="../calculator.html">Calculadora</a><a href="../contact.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+<main id="contenido">
+  <section class="section">
+    <h1 class="page-title">Diseño Arquitectónico</h1>
+    <p class="page-subtitle">Creamos propuestas estéticas y funcionales alineadas con tus objetivos de uso, presupuesto y normativa.</p>
+    <article class="card">
+      <h3>Descripción</h3>
+      <p>Desarrollamos anteproyectos, planos arquitectónicos, modelado 3D y detalles constructivos para viviendas, comercios y espacios corporativos.</p>
+      <h3>Beneficios</h3>
+      <ul class="service-list">
+        <li>Optimización de espacios y circulación.</li>
+        <li>Mayor claridad del proyecto antes de construir.</li>
+        <li>Diseño alineado a normas y factibilidad técnica.</li>
+      </ul>
+      <a class="btn" href="../contact.html">Cotizar</a>
+    </article>
+  </section>
+</main>
+<footer><p>© 2026 XARCON. Todos los derechos reservados.</p></footer>
+<script>const b=document.querySelector('.menu-toggle');const n=document.querySelector('.main-nav');b?.addEventListener('click',()=>{const e=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!e));n.classList.toggle('open');});</script>
+</body>
+</html>

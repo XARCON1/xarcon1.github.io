@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XARCON | Contacto</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="nav-wrapper">
+    <a class="brand" href="index.html"><img src="images/favicon.png" alt="Logo XARCON"><strong>XARCON</strong></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="about.html">Quiénes Somos</a>
+      <a href="services.html">Servicios</a>
+      <a href="calculator.html">Calculadora</a>
+      <a class="active" href="contact.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="section">
+    <h1 class="page-title">Contacto</h1>
+    <p class="page-subtitle">Estamos listos para escuchar tu proyecto y asesorarte sin compromiso.</p>
+    <div class="grid two">
+      <article class="card">
+        <h3>Canales de atención</h3>
+        <p>Email: contacto@xarcon.com</p>
+        <p>WhatsApp: +505 5852 0409</p>
+        <a class="btn" href="https://wa.me/50558520409" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+      </article>
+      <article class="card form-card">
+        <h3>Solicitar asesoría</h3>
+        <label for="nombre">Nombre</label><input id="nombre" type="text" placeholder="Tu nombre">
+        <label for="correo">Correo</label><input id="correo" type="email" placeholder="tu@email.com">
+        <label for="mensaje">Mensaje</label><textarea id="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto"></textarea>
+        <button class="btn" type="button">Enviar solicitud</button>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer><p>© 2026 XARCON. Todos los derechos reservados.</p></footer>
+<script>
+const btn = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.main-nav');
+btn?.addEventListener('click', () => { const ex = btn.getAttribute('aria-expanded') === 'true'; btn.setAttribute('aria-expanded', String(!ex)); nav.classList.toggle('open'); });
+</script>
+</body>
+</html>
