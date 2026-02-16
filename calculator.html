@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XARCON | Calculadora</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="nav-wrapper">
+    <a class="brand" href="index.html"><img src="images/favicon.png" alt="Logo XARCON"><strong>XARCON</strong></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="about.html">Quiénes Somos</a>
+      <a href="services.html">Servicios</a>
+      <a class="active" href="calculator.html">Calculadora</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="section">
+    <h1 class="page-title">Calculadora de Materiales</h1>
+    <p class="page-subtitle">Estima rápidamente volumen de concreto o mortero en metros cúbicos.</p>
+    <div class="calc-grid">
+      <article class="card form-card">
+        <h3>Concreto</h3>
+        <label for="lc">Largo (m)</label><input type="number" id="lc" min="0" step="0.01">
+        <label for="ac">Ancho (m)</label><input type="number" id="ac" min="0" step="0.01">
+        <label for="hc">Alto (m)</label><input type="number" id="hc" min="0" step="0.01">
+        <button class="btn" type="button" onclick="calc('c')">Calcular</button>
+        <p id="rc" class="result"></p>
+      </article>
+      <article class="card form-card">
+        <h3>Mortero</h3>
+        <label for="lm">Largo (m)</label><input type="number" id="lm" min="0" step="0.01">
+        <label for="am">Ancho (m)</label><input type="number" id="am" min="0" step="0.01">
+        <label for="hm">Alto (m)</label><input type="number" id="hm" min="0" step="0.01">
+        <button class="btn" type="button" onclick="calc('m')">Calcular</button>
+        <p id="rm" class="result"></p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer><p>© 2026 XARCON. Todos los derechos reservados.</p></footer>
+<script>
+const btn = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.main-nav');
+btn?.addEventListener('click', () => { const ex = btn.getAttribute('aria-expanded') === 'true'; btn.setAttribute('aria-expanded', String(!ex)); nav.classList.toggle('open'); });
+function calc(t){
+  const l=parseFloat(document.getElementById('l'+t).value)||0;
+  const a=parseFloat(document.getElementById('a'+t).value)||0;
+  const h=parseFloat(document.getElementById('h'+t).value)||0;
+  const v=l*a*h;
+  document.getElementById('r'+t).textContent=v>0?`Volumen estimado: ${v.toFixed(2)} m³`:'Ingresa valores válidos para calcular.';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XARCON | Servicios</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+  <div class="nav-wrapper">
+    <a class="brand" href="index.html"><img src="images/favicon.png" alt="Logo XARCON"><strong>XARCON</strong></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="about.html">Quiénes Somos</a>
+      <a class="active" href="services.html">Servicios</a>
+      <a href="calculator.html">Calculadora</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="section">
+    <h1 class="page-title">Servicios Generales</h1>
+    <p class="page-subtitle">Conoce nuestras áreas especializadas y selecciona la que mejor se adapte a tu proyecto.</p>
+    <div class="grid two">
+      <article class="card">
+        <h3>Diseño Arquitectónico</h3>
+        <p>Diseño de espacios, anteproyectos, planos y modelado arquitectónico.</p>
+        <a class="btn btn-outline" href="services/architecture.html">Ver detalle</a>
+      </article>
+      <article class="card">
+        <h3>Ingeniería</h3>
+        <p>Soluciones estructurales, sanitarias, eléctricas y coordinación técnica.</p>
+        <a class="btn btn-outline" href="services/engineering.html">Ver detalle</a>
+      </article>
+      <article class="card">
+        <h3>Presupuesto de Obra</h3>
+        <p>Estimaciones de costos, cronogramas y control financiero de proyectos.</p>
+        <a class="btn btn-outline" href="services/budget.html">Ver detalle</a>
+      </article>
+      <article class="card">
+        <h3>Construcción y Ejecución</h3>
+        <p>Supervisión, control de calidad y ejecución integral de obras civiles.</p>
+        <a class="btn btn-outline" href="services/construction.html">Ver detalle</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer><p>© 2026 XARCON. Todos los derechos reservados.</p></footer>
+<script>
+const btn = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.main-nav');
+btn?.addEventListener('click', () => { const ex = btn.getAttribute('aria-expanded') === 'true'; btn.setAttribute('aria-expanded', String(!ex)); nav.classList.toggle('open'); });
+</script>
+</body>
+</html>
