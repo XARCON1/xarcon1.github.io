@@ -12,7 +12,7 @@
 <header class="site-header">
   <div class="nav-wrapper">
     <a class="brand" href="index.html"><img src="images/favicon.png" alt="Logo XARCON"><strong>XARCON</strong></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú"><span></span></button>
     <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
       <a href="index.html">Inicio</a>
       <a href="about.html">Quiénes Somos</a>
@@ -46,10 +46,6 @@
 </main>
 
 <footer><p>© 2026 XARCON. Todos los derechos reservados.</p></footer>
-<script>
-const btn = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.main-nav');
-btn?.addEventListener('click', () => { const ex = btn.getAttribute('aria-expanded') === 'true'; btn.setAttribute('aria-expanded', String(!ex)); nav.classList.toggle('open'); });
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
