@@ -1,5 +1,7 @@
 const menuButton = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('.main-nav');
+const themeToggleButton = document.querySelector('.theme-toggle');
+const THEME_KEY = 'xarcon-theme';
 
 if (menuButton && mainNav) {
   menuButton.addEventListener('click', () => {
@@ -8,6 +10,28 @@ if (menuButton && mainNav) {
     mainNav.classList.toggle('open');
   });
 }
+
+const updateThemeButton = (theme) => {
+  if (!themeToggleButton) return;
+  const isDark = theme === 'dark-mode';
+  themeToggleButton.textContent = isDark ? '🌙' : '☀️';
+  themeToggleButton.setAttribute('aria-label', isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro');
+  themeToggleButton.setAttribute('title', isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro');
+};
+
+const getPreferredTheme = () => {
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  if (savedTheme === 'dark-mode' || savedTheme === 'light-mode') return savedTheme;
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return prefersDark ? 'dark-mode' : 'light-mode';
+};
+
+const applyTheme = (theme) => {
+  document.body.classList.remove('dark-mode', 'light-mode');
+  document.body.classList.add(theme);
+  updateThemeButton(theme);
+  updateChartColors();
+};
 
 const counters = document.querySelectorAll('[data-counter]');
 if (counters.length) {
@@ -89,10 +113,48 @@ if (lightbox) {
   });
 }
 
+const getChartTheme = () => {
+  const styles = getComputedStyle(document.body);
+  return {
+    textColor: styles.getPropertyValue('--text').trim() || '#eef4ff',
+    mutedColor: styles.getPropertyValue('--muted').trim() || '#b9c8df',
+    gridColor: styles.getPropertyValue('--chart-grid').trim() || 'rgba(255,255,255,0.08)',
+    cardColor: styles.getPropertyValue('--bg-card').trim() || '#111a2c'
+  };
+};
+
+const charts = [];
+
+const updateChartColors = () => {
+  if (!charts.length) return;
+  const theme = getChartTheme();
+  charts.forEach((chart) => {
+    if (chart.options?.plugins?.legend?.labels) {
+      chart.options.plugins.legend.labels.color = theme.textColor;
+    }
+
+    if (chart.options?.scales) {
+      Object.values(chart.options.scales).forEach((scale) => {
+        if (scale.ticks) scale.ticks.color = theme.mutedColor;
+        if (scale.grid) scale.grid.color = theme.gridColor;
+      });
+    }
+
+    chart.data.datasets.forEach((dataset) => {
+      if (dataset.borderColor === '#111a2c' || dataset.borderColor === '#eef3ff') {
+        dataset.borderColor = theme.cardColor;
+      }
+    });
+
+    chart.update();
+  });
+};
+
 if (typeof window.Chart !== 'undefined') {
   const annualCtx = document.getElementById('annualGrowthChart');
+  const theme = getChartTheme();
   if (annualCtx) {
-    new Chart(annualCtx, {
+    const annualChart = new Chart(annualCtx, {
       type: 'bar',
       data: {
         labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
@@ -105,25 +167,26 @@ if (typeof window.Chart !== 'undefined') {
       },
       options: {
         responsive: true,
-        plugins: { legend: { labels: { color: '#eef4ff' } } },
+        plugins: { legend: { labels: { color: theme.textColor } } },
         scales: {
-          x: { ticks: { color: '#b9c8df' }, grid: { color: 'rgba(255,255,255,0.08)' } },
-          y: { beginAtZero: true, ticks: { color: '#b9c8df' }, grid: { color: 'rgba(255,255,255,0.08)' } }
+          x: { ticks: { color: theme.mutedColor }, grid: { color: theme.gridColor } },
+          y: { beginAtZero: true, ticks: { color: theme.mutedColor }, grid: { color: theme.gridColor } }
         }
       }
     });
+    charts.push(annualChart);
   }
 
   const servicesCtx = document.getElementById('serviceDistributionChart');
   if (servicesCtx) {
-    new Chart(servicesCtx, {
+    const serviceChart = new Chart(servicesCtx, {
       type: 'doughnut',
       data: {
         labels: ['Arquitectura', 'Ingeniería', 'Construcción', 'Presupuesto'],
         datasets: [{
           data: [30, 25, 30, 15],
           backgroundColor: ['#2dc0ff', '#f7b733', '#49de9f', '#7f8cff'],
-          borderColor: '#111a2c',
+          borderColor: theme.cardColor,
           borderWidth: 3
         }]
       },
@@ -131,12 +194,25 @@ if (typeof window.Chart !== 'undefined') {
         responsive: true,
         plugins: {
           legend: {
-            labels: { color: '#eef4ff' }
+            labels: { color: theme.textColor }
           }
         }
       }
     });
+    charts.push(serviceChart);
   }
+}
+
+
+if (themeToggleButton) {
+  const initialTheme = getPreferredTheme();
+  applyTheme(initialTheme);
+
+  themeToggleButton.addEventListener('click', () => {
+    const nextTheme = document.body.classList.contains('dark-mode') ? 'light-mode' : 'dark-mode';
+    applyTheme(nextTheme);
+    localStorage.setItem(THEME_KEY, nextTheme);
+  });
 }
 
 window.calc = (type) => {
