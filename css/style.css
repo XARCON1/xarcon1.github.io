@@ -68,12 +68,12 @@ img {
   align-items: center;
   text-decoration: none;
   color: var(--text);
-  gap: 10px;
+  gap: 20px;
 }
 
 .brand img {
-  width: 140px;
-  height: 140px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
 }
 
