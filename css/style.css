@@ -225,11 +225,11 @@ main {
 }
 
 .hero-title-metallic {
-  color: #d7dbe3;
+  color: #b9ecff;
   font-family: 'Arial Black', 'Segoe UI', Impact, sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
-  background: linear-gradient(140deg, #f5f7fa 0%, #cdd3dd 18%, #ffffff 30%, #9ea6b3 48%, #f2f4f8 62%, #858f9d 78%, #e6e9ef 100%);
+  background: linear-gradient(140deg, #e9faff 0%, #bfefff 20%, #f3fdff 38%, #89daf4 56%, #d6f6ff 74%, #74cbe8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
