@@ -218,9 +218,24 @@ main {
   padding: 32px 24px;
 }
 
+
 .hero h1 {
   font-size: clamp(2rem, 5vw, 3.7rem);
   margin-bottom: 12px;
+}
+
+.hero-title-metallic {
+  color: #d7dbe3;
+  font-family: 'Arial Black', 'Segoe UI', Impact, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(140deg, #f5f7fa 0%, #cdd3dd 18%, #ffffff 30%, #9ea6b3 48%, #f2f4f8 62%, #858f9d 78%, #e6e9ef 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.45),
+    0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
