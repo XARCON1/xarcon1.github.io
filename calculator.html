@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculadora profesional de materiales XARCON para estimar concreto y mortero de forma rápida y precisa.">
   <title>XARCON | Calculadora</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -25,25 +26,25 @@
 </header>
 
 <main id="contenido">
-  <section class="section">
-    <h1 class="page-title">Calculadora de Materiales</h1>
-    <p class="page-subtitle">Estima rápidamente volumen de concreto o mortero en metros cúbicos.</p>
+  <section class="section" aria-labelledby="calc-title">
+    <h1 id="calc-title" class="page-title">Calculadora de Materiales</h1>
+    <p class="page-subtitle">Herramienta profesional para estimar volumen de concreto o mortero en metros cúbicos.</p>
     <div class="calc-grid">
-      <article class="card form-card">
+      <article class="card form-card reveal-on-scroll">
         <h3>Concreto</h3>
-        <label for="lc">Largo (m)</label><input type="number" id="lc" min="0" step="0.01">
-        <label for="ac">Ancho (m)</label><input type="number" id="ac" min="0" step="0.01">
-        <label for="hc">Alto (m)</label><input type="number" id="hc" min="0" step="0.01">
-        <button class="btn" type="button" onclick="calc('c')">Calcular</button>
-        <p id="rc" class="result"></p>
+        <label for="lc">Largo (m)</label><input type="number" id="lc" min="0" step="0.01" inputmode="decimal">
+        <label for="ac">Ancho (m)</label><input type="number" id="ac" min="0" step="0.01" inputmode="decimal">
+        <label for="hc">Alto (m)</label><input type="number" id="hc" min="0" step="0.01" inputmode="decimal">
+        <button class="btn" type="button" onclick="calc('c')">Calcular concreto</button>
+        <p id="rc" class="result" aria-live="polite"></p>
       </article>
-      <article class="card form-card">
+      <article class="card form-card reveal-on-scroll">
         <h3>Mortero</h3>
-        <label for="lm">Largo (m)</label><input type="number" id="lm" min="0" step="0.01">
-        <label for="am">Ancho (m)</label><input type="number" id="am" min="0" step="0.01">
-        <label for="hm">Alto (m)</label><input type="number" id="hm" min="0" step="0.01">
-        <button class="btn" type="button" onclick="calc('m')">Calcular</button>
-        <p id="rm" class="result"></p>
+        <label for="lm">Largo (m)</label><input type="number" id="lm" min="0" step="0.01" inputmode="decimal">
+        <label for="am">Ancho (m)</label><input type="number" id="am" min="0" step="0.01" inputmode="decimal">
+        <label for="hm">Alto (m)</label><input type="number" id="hm" min="0" step="0.01" inputmode="decimal">
+        <button class="btn" type="button" onclick="calc('m')">Calcular mortero</button>
+        <p id="rm" class="result" aria-live="polite"></p>
       </article>
     </div>
   </section>

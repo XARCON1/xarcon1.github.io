@@ -9,6 +9,13 @@ if (menuButton && mainNav) {
     menuButton.setAttribute('aria-expanded', String(!expanded));
     mainNav.classList.toggle('open');
   });
+
+  mainNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menuButton.setAttribute('aria-expanded', 'false');
+      mainNav.classList.remove('open');
+    });
+  });
 }
 
 const updateThemeButton = (theme) => {
@@ -32,6 +39,23 @@ const applyTheme = (theme) => {
   updateThemeButton(theme);
   updateChartColors();
 };
+
+const rotatingTextNode = document.querySelector('[data-rotate-text]');
+if (rotatingTextNode) {
+  const phrases = rotatingTextNode.dataset.rotateText.split('|').map((item) => item.trim()).filter(Boolean);
+  let phraseIndex = 0;
+  if (phrases.length) {
+    rotatingTextNode.textContent = phrases[0];
+    setInterval(() => {
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      rotatingTextNode.animate([
+        { opacity: 0, transform: 'translateY(8px)' },
+        { opacity: 1, transform: 'translateY(0)' }
+      ], { duration: 450, easing: 'ease-out' });
+      rotatingTextNode.textContent = phrases[phraseIndex];
+    }, 2300);
+  }
+}
 
 const counters = document.querySelectorAll('[data-counter]');
 if (counters.length) {
@@ -62,6 +86,20 @@ if (counters.length) {
   }, { threshold: 0.35 });
 
   counters.forEach((counter) => observer.observe(counter));
+}
+
+const revealElements = document.querySelectorAll('.reveal-on-scroll');
+if (revealElements.length) {
+  const revealObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.18 });
+
+  revealElements.forEach((item) => revealObserver.observe(item));
 }
 
 const filterButtons = document.querySelectorAll('[data-filter]');
@@ -111,6 +149,59 @@ if (lightbox) {
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
   });
+}
+
+const testimonialCards = document.querySelectorAll('.testimonial-card');
+if (testimonialCards.length) {
+  let testimonialIndex = 0;
+  setInterval(() => {
+    testimonialCards[testimonialIndex].classList.remove('active');
+    testimonialIndex = (testimonialIndex + 1) % testimonialCards.length;
+    testimonialCards[testimonialIndex].classList.add('active');
+  }, 4500);
+}
+
+const particlesCanvas = document.getElementById('heroParticles');
+if (particlesCanvas) {
+  const context = particlesCanvas.getContext('2d');
+  const particles = [];
+  const particleCount = 38;
+
+  const resizeCanvas = () => {
+    particlesCanvas.width = particlesCanvas.offsetWidth;
+    particlesCanvas.height = particlesCanvas.offsetHeight;
+  };
+
+  const createParticle = () => ({
+    x: Math.random() * particlesCanvas.width,
+    y: Math.random() * particlesCanvas.height,
+    radius: Math.random() * 1.7 + 0.4,
+    speedX: (Math.random() - 0.5) * 0.5,
+    speedY: (Math.random() - 0.5) * 0.5
+  });
+
+  const drawParticles = () => {
+    context.clearRect(0, 0, particlesCanvas.width, particlesCanvas.height);
+    particles.forEach((particle) => {
+      particle.x += particle.speedX;
+      particle.y += particle.speedY;
+
+      if (particle.x < 0 || particle.x > particlesCanvas.width) particle.speedX *= -1;
+      if (particle.y < 0 || particle.y > particlesCanvas.height) particle.speedY *= -1;
+
+      context.beginPath();
+      context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+      context.fillStyle = 'rgba(126, 216, 255, 0.6)';
+      context.fill();
+    });
+
+    requestAnimationFrame(drawParticles);
+  };
+
+  resizeCanvas();
+  for (let i = 0; i < particleCount; i += 1) particles.push(createParticle());
+  drawParticles();
+  window.addEventListener('resize', resizeCanvas);
 }
 
 const getChartTheme = () => {
@@ -203,7 +294,6 @@ if (typeof window.Chart !== 'undefined') {
   }
 }
 
-
 if (themeToggleButton) {
   const initialTheme = getPreferredTheme();
   applyTheme(initialTheme);
@@ -226,5 +316,7 @@ window.calc = (type) => {
     resultNode.textContent = result > 0
       ? `Volumen estimado: ${result.toFixed(2)} m³`
       : 'Ingresa valores válidos para calcular.';
+    resultNode.classList.remove('show');
+    requestAnimationFrame(() => resultNode.classList.add('show'));
   }
 };

@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Xarcon: empresa profesional de arquitectura, ingeniería y construcción en Nicaragua.">
+  <meta name="description" content="XARCON Construcciones: empresa de arquitectura, ingeniería y construcción en Nicaragua. Ejecutamos proyectos residenciales, comerciales e infraestructura con estándares corporativos.">
+  <meta name="keywords" content="construcción, arquitectura, ingeniería, Nicaragua, Xarcon, proyectos corporativos">
+  <meta name="author" content="XARCON Construcciones">
+  <meta property="og:title" content="XARCON Construcciones | Soluciones integrales de construcción">
+  <meta property="og:description" content="Diseño, ingeniería y ejecución de obras de alto nivel para vivienda, comercio e infraestructura.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/city.jpg">
   <title>XARCON | Inicio</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
@@ -26,89 +32,146 @@
 </header>
 
 <main id="contenido">
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-title">
+    <canvas id="heroParticles" class="hero-particles" aria-hidden="true"></canvas>
     <div class="hero-content">
-      <h1 class="hero-title-metallic">XARCON CONSTRUCCIONES</h1>
+      <p class="hero-tag">Construcción corporativa de alto rendimiento</p>
+      <h1 id="hero-title" class="hero-title-metallic">XARCON CONSTRUCCIONES</h1>
+      <p class="hero-rotating-text" data-rotate-text="Arquitectura de precisión|Ingeniería integral|Construcción con excelencia"></p>
       <p>En XARCON unimos arquitectura, ingeniería y ejecución con estándares profesionales para entregar obras modernas, eficientes y duraderas.</p>
-      <a class="btn" href="contact.html">Solicitar asesoría profesional</a>
+      <div class="hero-actions">
+        <a class="btn" href="contact.html">Solicitar Cotización</a>
+        <a class="btn btn-outline" href="#proyectos">Ver proyectos destacados</a>
+      </div>
     </div>
   </section>
 
-  <section class="section">
-    <h2>Resultados que respaldan nuestro trabajo</h2>
+  <section class="section" aria-labelledby="estadisticas-title">
+    <h2 id="estadisticas-title">Resultados que respaldan nuestro trabajo</h2>
     <div class="grid four">
-      <article class="card stats">
-        <p class="stat-number" data-counter="12">0</p>
+      <article class="card stats reveal-on-scroll">
+        <p class="stat-number" data-counter="45">0</p>
         <p class="stat-label">Proyectos completados</p>
       </article>
-      <article class="card stats">
-        <p class="stat-number" data-counter="2">0</p>
+      <article class="card stats reveal-on-scroll">
+        <p class="stat-number" data-counter="12">0</p>
         <p class="stat-label">Años de experiencia</p>
       </article>
-      <article class="card stats">
-        <p class="stat-number" data-counter="5">0</p>
-        <p class="stat-label">Clientes atendidos</p>
+      <article class="card stats reveal-on-scroll">
+        <p class="stat-number" data-counter="68">0</p>
+        <p class="stat-label">Clientes satisfechos</p>
       </article>
-      <article class="card stats">
-        <p class="stat-number" data-counter="4500" data-suffix=" m²">0</p>
+      <article class="card stats reveal-on-scroll">
+        <p class="stat-number" data-counter="25000" data-suffix=" m²">0</p>
         <p class="stat-label">M² construidos</p>
       </article>
     </div>
   </section>
 
-  <section class="section">
-    <h2>Servicios especializados</h2>
+  <section class="section" aria-labelledby="servicios-title">
+    <h2 id="servicios-title">Servicios especializados</h2>
     <div class="grid two">
-      <article class="card service-card">
-        <h3>Diseño Arquitectónico</h3>
+      <article class="card service-card reveal-on-scroll">
+        <h3><span class="service-icon" aria-hidden="true">🏛️</span>Diseño Arquitectónico</h3>
         <p>Conceptualización, planos y modelado enfocados en funcionalidad, estética y normativa.</p>
         <a class="btn btn-outline" href="services/architecture.html">Ver detalle</a>
       </article>
-      <article class="card service-card">
-        <h3>Ingeniería Integral</h3>
+      <article class="card service-card reveal-on-scroll">
+        <h3><span class="service-icon" aria-hidden="true">🧩</span>Ingeniería Integral</h3>
         <p>Soluciones estructurales, eléctricas e hidrosanitarias coordinadas para obra segura.</p>
         <a class="btn btn-outline" href="services/engineering.html">Ver detalle</a>
       </article>
-      <article class="card service-card">
-        <h3>Presupuestos y Planificación</h3>
+      <article class="card service-card reveal-on-scroll">
+        <h3><span class="service-icon" aria-hidden="true">📊</span>Presupuestos y Planificación</h3>
         <p>Estimación financiera, programación y control de costos desde el inicio del proyecto.</p>
         <a class="btn btn-outline" href="services/budget.html">Ver detalle</a>
       </article>
-      <article class="card service-card">
-        <h3>Construcción y Supervisión</h3>
+      <article class="card service-card reveal-on-scroll">
+        <h3><span class="service-icon" aria-hidden="true">🏗️</span>Construcción y Supervisión</h3>
         <p>Ejecución profesional con control de calidad, seguridad y seguimiento permanente.</p>
         <a class="btn btn-outline" href="services/construction.html">Ver detalle</a>
       </article>
     </div>
   </section>
 
-  <section class="section">
-    <h2>Proyectos destacados</h2>
-    <p>Filtra por tipo de proyecto y amplía cada imagen para verla en detalle.</p>
-    <div class="filter-buttons" aria-label="Filtro de galería">
+  <section id="proyectos" class="section" aria-labelledby="proyectos-title">
+    <h2 id="proyectos-title">PROYECTOS DESTACADOS</h2>
+    <p>Filtra por tipo de obra y revisa información de cada proyecto al pasar el cursor.</p>
+    <div class="filter-buttons" aria-label="Filtro de proyectos destacados">
       <button class="active" type="button" data-filter="all">Todos</button>
-      <button type="button" data-filter="residencial">Residencial</button>
+      <button type="button" data-filter="vivienda">Vivienda</button>
       <button type="button" data-filter="comercial">Comercial</button>
-      <button type="button" data-filter="industrial">Industrial</button>
+      <button type="button" data-filter="infraestructura">Infraestructura</button>
     </div>
     <div class="gallery-grid">
-      <article class="gallery-item" data-category="residencial"><div class="gallery-card"><img src="images/city.jpg" alt="Proyecto residencial moderno" data-caption="Residencial premium en Managua"></div></article>
-      <article class="gallery-item" data-category="comercial"><div class="gallery-card"><img src="images/service1.png" alt="Centro comercial estructural" data-caption="Complejo comercial de alta circulación"></div></article>
-      <article class="gallery-item" data-category="industrial"><div class="gallery-card"><img src="images/city.jpg" alt="Nave industrial" data-caption="Planta industrial con diseño eficiente"></div></article>
-      <article class="gallery-item" data-category="residencial"><div class="gallery-card"><img src="images/service.jpg" alt="Conjunto habitacional" data-caption="Conjunto habitacional vertical"></div></article>
-      <article class="gallery-item" data-category="comercial"><div class="gallery-card"><img src="images/city.jpg" alt="Edificio corporativo" data-caption="Edificio corporativo sostenible"></div></article>
-      <article class="gallery-item" data-category="industrial"><div class="gallery-card"><img src="images/service.jpg" alt="Plataforma logística" data-caption="Centro logístico y distribución"></div></article>
+      <article class="gallery-item reveal-on-scroll" data-category="vivienda">
+        <div class="gallery-card">
+          <img src="images/city.jpg" alt="Torre residencial de alta gama" data-caption="Torre residencial premium en Managua">
+          <div class="project-overlay"><h3>Torre Aurora</h3><p>Vivienda vertical · 8,200 m²</p></div>
+        </div>
+      </article>
+      <article class="gallery-item reveal-on-scroll" data-category="comercial">
+        <div class="gallery-card">
+          <img src="images/service1.png" alt="Centro comercial moderno" data-caption="Centro comercial de alta circulación">
+          <div class="project-overlay"><h3>Plaza Norte</h3><p>Comercial · 5 niveles</p></div>
+        </div>
+      </article>
+      <article class="gallery-item reveal-on-scroll" data-category="infraestructura">
+        <div class="gallery-card">
+          <img src="images/city.jpg" alt="Infraestructura urbana" data-caption="Desarrollo vial urbano">
+          <div class="project-overlay"><h3>Eje Urbano 04</h3><p>Infraestructura · Movilidad</p></div>
+        </div>
+      </article>
+      <article class="gallery-item reveal-on-scroll" data-category="vivienda">
+        <div class="gallery-card">
+          <img src="images/service.jpg" alt="Conjunto habitacional" data-caption="Conjunto habitacional vertical">
+          <div class="project-overlay"><h3>Residencial Vista Sur</h3><p>Vivienda · 120 unidades</p></div>
+        </div>
+      </article>
+      <article class="gallery-item reveal-on-scroll" data-category="comercial">
+        <div class="gallery-card">
+          <img src="images/city.jpg" alt="Edificio corporativo sostenible" data-caption="Edificio corporativo sostenible">
+          <div class="project-overlay"><h3>Corporate Hub</h3><p>Comercial · Oficinas AAA</p></div>
+        </div>
+      </article>
+      <article class="gallery-item reveal-on-scroll" data-category="infraestructura">
+        <div class="gallery-card">
+          <img src="images/service.jpg" alt="Centro logístico" data-caption="Centro logístico y distribución">
+          <div class="project-overlay"><h3>LogiPort</h3><p>Infraestructura · Logística</p></div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section class="section">
-    <h2>Indicadores de crecimiento</h2>
+  <section class="section" aria-labelledby="testimonios-title">
+    <h2 id="testimonios-title">Testimonios de clientes</h2>
+    <div class="testimonial-slider" aria-live="polite">
+      <article class="testimonial-card active">
+        <img src="images/logo.png" alt="Cliente Corporativo A">
+        <blockquote>"XARCON ejecutó nuestro proyecto comercial con precisión técnica y total cumplimiento de tiempos."</blockquote>
+        <p><strong>Ing. Javier Morales</strong> · Director de Operaciones</p>
+      </article>
+      <article class="testimonial-card">
+        <img src="images/logo.png" alt="Cliente Corporativo B">
+        <blockquote>"Su equipo integró diseño, ingeniería y obra en un flujo impecable. Altamente recomendados."</blockquote>
+        <p><strong>Arq. Melissa Rivas</strong> · Desarrollo Inmobiliario</p>
+      </article>
+      <article class="testimonial-card">
+        <img src="images/logo.png" alt="Cliente Corporativo C">
+        <blockquote>"Tuvimos visibilidad total de costos y avances. El resultado final superó las expectativas."</blockquote>
+        <p><strong>Carlos Méndez</strong> · Gerente General</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="indicadores-title">
+    <h2 id="indicadores-title">Indicadores de crecimiento</h2>
     <div class="chart-grid">
-      <article class="card chart-card">
+      <article class="card chart-card reveal-on-scroll">
         <h3>Crecimiento anual de proyectos</h3>
         <canvas id="annualGrowthChart" aria-label="Gráfico de barras de crecimiento anual"></canvas>
       </article>
-      <article class="card chart-card">
+      <article class="card chart-card reveal-on-scroll">
         <h3>Distribución de servicios</h3>
         <canvas id="serviceDistributionChart" aria-label="Gráfico circular de distribución de servicios"></canvas>
       </article>
